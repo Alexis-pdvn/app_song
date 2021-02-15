@@ -26,3 +26,5 @@ Auth::routes();
 Route::get('/utilisateur/{id}', [FirstController::class, "utilisateur"])->where('id','[0-9]+');
 
 Route::get('/suivre/{id}', [FirstController::class, "suivre"])->middleware('auth')->where('id','[0-9]+');
+
+Route::get("/search/{search}", [FirstController::class, "search"]);

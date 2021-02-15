@@ -49,6 +49,17 @@ class FirstController extends Controller{
         return view("firstcontroller.utilisateur", ["user" => $user]);
     }
 
+    
+    public function search($search){
+        // SELECT * FROM users WHERE name LIKE '$search%'
+       $user = User::WhereRaw("name LIKE CONCAT(?, '%')", [$search])->orderBy('id', 'desc')->get();
+
+       $songs = Song::WhereRaw("title LIKE CONCAT('%', ?, '%')", [$search])->orderBy('votes', 'desc')->get();
+
+        return view("firstcontroller.search", ["search" => $search, "users" => $user, "songs" => $songs]);
+    }
+
+    
     public function suivre($id)
     {
         Auth::user()->IlikeThem()->toggle($id);

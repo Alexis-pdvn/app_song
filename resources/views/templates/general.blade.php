@@ -40,6 +40,12 @@
                         <li><a href="/">Home</a></li>
                         
                         <li><a href="/about">About</a></li>
+                        <li>
+                            <form id="search" method="get" action="/search">
+                                <input type="text" name="search" Placeholder="Rechercher">
+                                <input type="submit" Value="Go">
+                            </form>
+                        </li>
                         <li><a href="/article/1">Work</a></li>
                         @guest
                             @if (Route::has('login'))
