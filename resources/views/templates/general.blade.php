@@ -20,6 +20,9 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.pjax.js"></script>
 </head>
 <body>
 
@@ -88,10 +91,11 @@
         </div>
 </header>
 
-<div>
+<div id="pjax-container">
     @yield('contenu')
-    <audio controls id="audio">
 </div>
+
+<audio controls id="audio">
 
 
 <footer class="footer-section text-center">
@@ -110,13 +114,10 @@
     </div>
 </footer>
 
-
-<script src="/js/jquery-2.1.4.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/mixitup.min.js"></script>
 <script src="/js/magnific-popup.min.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/jquery.js"></script>
 <script src="/js/divers.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
