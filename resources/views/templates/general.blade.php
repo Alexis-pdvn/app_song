@@ -12,14 +12,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css"/>-->
     <link rel="stylesheet" href="/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/css/magnific-popup.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="stylesheet" href="/sass/main.css"/>
+    <link rel="stylesheet" href="/sass/main.css.map"/>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <![endif]-->
 
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.pjax.js"></script>
@@ -70,15 +73,13 @@
         <div class="row">
             <div class="col-lg-4 col-md-3">
                 <div class="logo">
-                    <h2 class="site-logo">Superbe Plateforme de Musique</h2>
+                    <h2 class="site-logo">MMI'Sound</h2>
                 </div>
             </div>
             <div class="col-lg-8 col-md-9">
-                <a href="" class="site-btn header-btn">Get in touch</a>
                 <nav class="main-menu">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        
                         <li><a href="/about">About</a></li>
                         <li>
                             <form id="search" method="get" action="/search">
@@ -111,11 +112,9 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                         @csrf
                                     </form>
-                               
                             </li>
                         @endguest!
                     </ul>

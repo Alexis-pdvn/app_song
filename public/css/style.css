@@ -1,13 +1,4 @@
-/* =================================
-------------------------------------
-  Riddle - Portfolio
-  Version: 1.0
- ------------------------------------ 
- ====================================*/
-
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
+/**
 
 html,
 body {
@@ -56,9 +47,7 @@ ol {
   margin: 0;
 }
 
-/*------------------------
-  Helper css
---------------------------*/
+
 .body-pad {
   padding: 0 40px;
 }
@@ -84,9 +73,7 @@ ol {
   color: #979797;
 }
 
-/*------------------------
-  Common Elements
---------------------------*/
+
 .element {
   margin-bottom: 100px;
 }
@@ -95,7 +82,6 @@ ol {
   margin-bottom: 0;
 }
 
-/*=== Preloder ===*/
 #preloder {
   position: fixed;
   width: 100%;
@@ -148,7 +134,6 @@ ol {
   }
 }
 
-/*=== Buttons ===*/
 .site-btn {
   display: inline-block;
   font-size: 14px;
@@ -193,7 +178,6 @@ ol {
   color: #fff;
 }
 
-/*===  Accordion  ===*/
 .accordion-area .panel {
   margin-bottom: 30px;
 }
@@ -261,7 +245,6 @@ ol {
   margin-left: -4px;
 }
 
-/*===  Tab  ===*/
 .tab-element .nav-tabs {
   border-bottom: none;
   margin-bottom: 35px;
@@ -327,7 +310,6 @@ ol {
   line-height: normal;
 }
 
-/*===  Icon Box  ===*/
 .icon-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,9 +330,6 @@ ol {
   margin-bottom: 25px;
 }
 
-/*------------------------
-    Header Section
---------------------------*/
 .header-section {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -388,16 +367,11 @@ ol {
   display: none;
 }
 
-/*------------------------
-    Intro Section
---------------------------*/
+
 .intro-section {
   padding: 110px 0;
 }
 
-/*------------------------
-    Portfolio Section
---------------------------*/
 .portfolio-section {
   overflow: hidden;
 }
@@ -507,9 +481,6 @@ ol {
   transform: scale(1);
 }
 
-/*------------------------
-    Footer Section
---------------------------*/
 .footer-section {
   padding: 110px 0;
 }
@@ -534,9 +505,6 @@ ol {
   margin-right: 0;
 }
 
-/*------------------------
-    About Page
---------------------------*/
 .pic-frame {
   position: relative;
   padding-left: 25px;
@@ -568,9 +536,6 @@ ol {
   color: #979797;
 }
 
-/*------------------------
-    Blog Page
---------------------------*/
 .blog-item {
   margin-bottom: 70px;
 }
@@ -613,9 +578,6 @@ ol {
   margin-bottom: 30px;
 }
 
-/*------------------------
-    Contact Page
---------------------------*/
 .contect-tect {
   text-align: center;
   margin-bottom: 70px;
@@ -671,23 +633,20 @@ ol {
   font-style: italic;
 }
 
-/* ===========================
-  Responsive
-==============================*/
 @media only screen and (max-width: 1448px) {
   .home-2.container {
     width: auto;
   }
 }
 
-/* Medium screen : 992px. */
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .portfolio-item {
     height: 450px;
   }
 }
 
-/* Tablet :768px. */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .body-pad {
     padding: 0 30px;
@@ -697,7 +656,6 @@ ol {
   }
 }
 
-/* Large Mobile :480px. */
 @media only screen and (max-width: 767px) {
   .body-pad {
     padding: 0 15px;
@@ -748,9 +706,10 @@ ol {
   }
 }
 
-/* small Mobile :320px. */
 @media only screen and (max-width: 479px) {
   .section-title {
     font-size: 30px;
   }
 }
+
+**/
