@@ -1,0 +1,17 @@
+.cards{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+        
+.cardsContent{
+
+    &_user{
+        display: flex;
+        align-items: center;
+            img{
+                width: 15%;
+            }
+    }
+
+}

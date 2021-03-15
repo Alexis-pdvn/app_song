@@ -31,60 +31,43 @@
 
 
 
-<header class="header-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-3">
-                <div class="logo">
-                    <h2 class="site-logo">MMI'Sound</h2>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-9">
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li>
-                            <form id="search" method="get" action="/search">
-                                <input type="text" name="search" Placeholder="Rechercher">
-                                <input type="submit" Value="Go">
-                            </form>
-                        </li>
-                        <li><a href="/article/1">Work</a></li>
-                        @guest
-                            @if (Route::has('login'))
-                                <li>
-                                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <li>
-                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                        <li><a href="/songs/create">New</a></li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                    <a  href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                    </form>
-                            </li>
-                        @endguest
-                    </ul>
-                </nav>
-            </div>
+<header class="header_section container">
+        <img src="/images/logo.png" alt="">
+        <div class="header_formulaire">
+            <form id="search" method="get" action="/search">
+                <input type="text" name="search" Placeholder="Rechercher">
+                <input type="submit" Value="Go">
+            </form>
         </div>
-    </div>
+        <nav class="header_main-menu">
+            <a href="">Accueil</a>
+            <a href="">Mes musiques</a>
+           @guest
+                @if (Route::has('login'))
+                        <a href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                @endif
+                
+                @if (Route::has('register'))
+                        <a href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                @endif
+            @else
+            <a href="/songs/create">Déposer une musique</a>
+                    <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                        <a  href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
+            @endguest
+        </nav>
+    
         <div class="nav-switch">
             <i class="fa fa-bars"></i>
         </div>
