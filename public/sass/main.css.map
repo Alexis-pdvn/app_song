@@ -5,7 +5,8 @@
         "main.scss",
         "components/_body.scss",
         "components/_header.scss",
-        "components/_footer.scss"
+        "components/_footer.scss",
+        "components/_login.scss"
     ],
     "names": [],
     "file": "main.css"
