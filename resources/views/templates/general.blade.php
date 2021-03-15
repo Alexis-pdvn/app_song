@@ -31,9 +31,8 @@
 
 
 
-<header class="header">
-<div class="header_section container">
-        <div class="header_logo">LOGO</div>
+<header class="header_section container">
+        <img src="/images/logo.png" alt="">
         <div class="header_formulaire">
             <form id="search" method="get" action="/search">
                 <input type="text" name="search" Placeholder="Rechercher">
@@ -68,7 +67,6 @@
                         </form>
             @endguest
         </nav>
-    </div>
     <!--<div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-3">
