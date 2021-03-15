@@ -28,8 +28,45 @@
 
 
 
-<header class="header-section">
-    <div class="container">
+<header class="header">
+<div class="header_section container">
+        <div class="header_logo">LOGO</div>
+        <div class="header_formulaire">
+            <form id="search" method="get" action="/search">
+                <input type="text" name="search" Placeholder="Rechercher">
+                <input type="submit" Value="Go">
+            </form>
+        </div>
+        <nav class="header_main-menu">
+            <a href="">Accueil</a>
+            <a href="">Mes musiques</a>
+           @guest
+                @if (Route::has('login'))
+                        <a href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                @endif
+                
+                @if (Route::has('register'))
+                        <a href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                @endif
+            @else
+            <a href="/songs/create">Déposer une musique</a>
+                    <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                        <a  href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
+            @endguest
+        </nav>
+    </div>
+    <!--<div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-3">
                 <div class="logo">
@@ -80,15 +117,12 @@
                                     </form>
                                
                             </li>
-                        @endguest
+                        @endguest!
                     </ul>
                 </nav>
             </div>
         </div>
-    </div>
-        <div class="nav-switch">
-            <i class="fa fa-bars"></i>
-        </div>
+    </div>-->
 </header>
 
 <div id="pjax-container">
