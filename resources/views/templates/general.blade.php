@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Riddle - Portfolio Template</title>
+    <title>MMI'SOUND</title>
     <meta charset="UTF-8">
     <meta name="description" content="Pictures, laravel">
     <meta name="keywords" content="Pictures, laravel">

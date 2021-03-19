@@ -1,16 +1,97 @@
-.loginBtn {
-    color: $basic-blue;
-    border: solid 1px $basic-blue;
-    padding: 12px 8px;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        color: $basic-white;
-        border: solid 1px $basic-blue;
-        background-color: $basic-blue;
-    }
+.loginMain {
+    display: flex;
 }
 
 .loginLeft {
     background-color: $basic-blue;
+    width: 50%;
+    height: 100vh;
+}
+
+.loginRight {
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 4rem;
+
+        &-title {
+            font-family: "Stretch";
+            color: $basic-blue;
+            font-size: 42pt;
+        }
+
+        &-special {
+            height: 10px;
+            width: 65%;
+            background-color: $basic-blue;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__form {
+
+        &-input {
+            padding: 12px 18px;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            background-color: $light-grey;
+            border: none;
+            outline: none;
+            width: 96%;
+
+            color: $basic-grey;
+            font-size: 12pt;
+
+            &::placeholder {
+                color: $basic-grey;
+                font-size: 12pt;
+            }
+        }
+    }
+
+    &__remember {
+    margin-bottom: 2rem;
+
+        input {
+            height: 13px;
+            width: 13px;
+            outline: none;
+        }
+
+        &-text {
+            font-size: 12pt;
+            color: $basic-grey;
+        }
+    }
+
+    &__button {
+        font-size: 18pt;
+        color: $basic-blue;
+        background-color: $basic-white;
+        border: solid 2px $basic-blue;
+        border-radius: 5px;
+        padding: 6px 14px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        margin-right: 1rem;
+    
+        &:hover {
+            color: $basic-white;
+            border: solid 2px $basic-blue;
+            background-color: $basic-blue;
+        }
+    }
+}
+
+#containerLogin {
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
