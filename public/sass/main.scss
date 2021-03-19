@@ -1,7 +1,14 @@
-// Variables
-@import '../sass/components/body';
+// Header and Footer
 @import '../sass/components/header';
 @import '../sass/components/footer';
+
+//  Controller
+@import '../sass/components/body';
+
+// Auth
 @import '../sass/components/login';
+
+// Variables
 @import '../sass/components/container';
 @import '../sass/components/home';
+@import '../sass/components/colors';

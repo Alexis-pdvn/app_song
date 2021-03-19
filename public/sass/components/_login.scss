@@ -1,0 +1,16 @@
+.loginBtn {
+    color: $basic-blue;
+    border: solid 1px $basic-blue;
+    padding: 12px 8px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $basic-white;
+        border: solid 1px $basic-blue;
+        background-color: $basic-blue;
+    }
+}
+
+.loginLeft {
+    background-color: $basic-blue;
+}
