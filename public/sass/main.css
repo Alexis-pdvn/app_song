@@ -19,6 +19,24 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.loginBtn {
+  color: #0044ff;
+  border: solid 1px #0044ff;
+  padding: 12px 8px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginBtn:hover {
+  color: #ffffff;
+  border: solid 1px #0044ff;
+  background-color: #0044ff;
+}
+
+.loginLeft {
+  background-color: #0044ff;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
