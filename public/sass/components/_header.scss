@@ -2,7 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-        img{
-            width: 100px;
+
+        &_logo{
+            color: $basic-blue;
+            font-family: 'Stretch Pro';
+            font-size: 36px;
+        }
+
+        &_formulaire{
+
+            input{
+                border: unset;
+                outline: unset;
+            }            
+
+            .input-text{
+                background-color: $light-grey;
+                width: 600px;
+                color: $basic-grey;
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 10px;
+            }
         }
 }

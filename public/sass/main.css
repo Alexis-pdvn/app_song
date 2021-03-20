@@ -10,8 +10,24 @@
           align-items: center;
 }
 
-.header_section img {
-  width: 100px;
+.header_section_logo {
+  color: #0044ff;
+  font-family: 'Stretch Pro';
+  font-size: 36px;
+}
+
+.header_section_formulaire input {
+  border: unset;
+  outline: unset;
+}
+
+.header_section_formulaire .input-text {
+  background-color: #F5F5F5;
+  width: 600px;
+  color: #606060;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 @font-face {
