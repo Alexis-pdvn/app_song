@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 22px;
 
         &_logo{
             color: $basic-blue;
@@ -24,5 +25,85 @@
                 padding: 10px;
                 border-radius: 10px;
             }
+        }
+
+        &_nav{
+            position: relative;
+            
+           /* .header_section_nav_icon:hover nav{
+                opacity: 1;
+            }*/
+
+            &_icon{
+                
+                .header_section_nav_i{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    
+
+                    i:nth-child(1){
+                        font-size: 25px;
+                    }
+
+                    i:nth-child(2){
+                        font-size: 15px;
+                        transform: rotate(-90deg);
+                        transition: .2s linear;
+                    }
+
+                    .react_hover{
+                        color: $basic-blue;
+                        margin-left: 0.5rem;                    
+                    }
+                }
+
+                &:hover .header_section_nav_i i:nth-child(2){
+                    transform: rotate(0deg);
+                    transition: .2s linear;
+                }
+
+                &:hover &_a{
+                    display: block;
+                }
+
+                
+                &_a{
+                    position: absolute;
+                    background-color: $light-grey;
+                    width: 170px;
+                    right:58px;
+                    top: 80px;
+                    line-height: 40px;
+                    padding: 14px 30px 14px 30px;
+                    border-radius: 5px;
+                    display: none;
+
+                    .hover_menu{
+                        color: $basic-blue;
+                        text-decoration: none;
+                        font-size: 28px;
+                    }
+
+                    &::before{
+                        content: " ";
+                        background-color: $light-grey;
+                        width: 30px;
+                        height: 30px;
+                        transform: rotate(45deg);
+                        border-radius: 3px;                    
+                        position: absolute;
+                        right: 30px;
+                        top: -15px;
+                    }
+                    
+                }
+                
+            }
+
+            
+
+             
         }
 }

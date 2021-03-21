@@ -15,7 +15,7 @@
 
     <!--<link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css"/>-->
-    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/css/magnific-popup.css" />
 
     <link rel="stylesheet" href="/sass/main.css"/>
@@ -45,45 +45,47 @@
 
             <div class="header_section_nav_icon">
 
-                <i class="far fa-user-circle"></i>
-                <i class="fas fa-chevron-down"></i>
-                
-            </div>
-            
-            <nav class="header_section_nav_a">
-                <a href="">My Account</a>
-                <a href="">Upload</a>
-                <a  href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <!--@guest
-                            @if (Route::has('login'))
-                                    <a href="{{ route('login') }}">{{ __('Se connecter') }}</a>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
-                            @endif
-                        @else
-                        <a href="/songs/create">Déposer une musique</a>
-                        <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
-                        </a>
-
-                            <a  href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                <div class="header_section_nav_i">
+                    <i class="react_hover far fa-user-circle"></i>
+                    <i class="react_hover fas fa-chevron-down"></i>
+                </div>
+                <nav class="header_section_nav_icon_a">
+                    <a class="hover_menu" href="">My Account</a>
+                    <a class="hover_menu" href="">Upload</a>
+                    <a class="hover_menu" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <!--@guest
+                                @if (Route::has('login'))
+                                        <a href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                                @endif
+                                
+                                @if (Route::has('register'))
+                                        <a href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                                @endif
+                            @else
+                            <a href="/songs/create">Déposer une musique</a>
+                            <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                @csrf
-                            </form>
-                @endguest-->
-            </nav>
+                                <a  href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                </form>
+                    @endguest-->
+                </nav>
         
+            </div>
+            
+            
         </div>
 </header>
 
