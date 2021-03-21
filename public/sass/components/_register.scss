@@ -1,19 +1,4 @@
-.loginMain {
-    display: flex;
-}
-
-.loginLeft {
-    background-color: $basic-blue;
-    width: 50%;
-    height: 100vh;
-
-    &__video {
-        width: 50%;
-        height: auto;
-    }
-}
-
-.loginRight {
+.registerLeft {
     width: 50%;
     height: 100vh;
 
@@ -35,7 +20,7 @@
 
         &-special {
             height: 10px;
-            width: 65%;
+            width: 50%;
             background-color: $basic-blue;
             margin-bottom: 15px;
         }
@@ -62,21 +47,6 @@
         }
     }
 
-    &__remember {
-    margin-bottom: 2rem;
-
-        input {
-            height: 13px;
-            width: 13px;
-            outline: none;
-        }
-
-        &-text {
-            font-size: 12pt;
-            color: $basic-grey;
-        }
-    }
-
     &__button {
         font-size: 18pt;
         color: $basic-blue;
@@ -95,25 +65,45 @@
             background-color: $basic-blue;
         }
     }
+
 }
 
-#containerLogin {
+#containerRegister {
     margin-left: 4rem;
     margin-right: 4rem;
 }
 
 
 /// Animation du bloc au chargement de la page
-.loginRight {
-    animation: loadLogin 1s ease-in-out;
+.registerLeft {
+    animation: loadRegister 1s ease-in-out;
 }
 
-@keyframes loadLogin {
+@keyframes loadRegister {
     from {
         transform: translateY(-30px);
     }
 
     to {
         transform: translateY(0px);
+    }
+}
+
+
+
+/// Id commun au page login et register 
+#accountText {
+    color: $basic-grey;
+    font-size: 11pt;
+}
+
+#accountLink {
+    margin-left: 5px;
+    color: $basic-grey;
+    font-size: 11pt;
+    
+    &:hover {
+        color: $basic-blue;
+        text-decoration: underline;
     }
 }

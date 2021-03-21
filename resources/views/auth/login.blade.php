@@ -3,7 +3,7 @@
 @section('contenu')
         <div class="loginMain">
             <div class="loginLeft">
-
+                
             </div>
 
             <div class="loginRight">
@@ -63,6 +63,8 @@
                             </div>
                         </form>
                     </div>
+
+                    <p id="accountText">You don't have a account yet ?<a href="/register" id="accountLink">Click here</a></p>
                 </div>
             </div>
         </div>
