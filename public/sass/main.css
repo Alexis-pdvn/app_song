@@ -1,3 +1,7 @@
+.errorMain {
+  background-color: #0044ff;
+}
+
 .header_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,6 +148,7 @@ a {
 .loginLeft__video {
   width: 50%;
   height: auto;
+  z-index: 999;
 }
 
 .loginRight {

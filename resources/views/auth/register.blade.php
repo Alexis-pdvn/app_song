@@ -57,6 +57,8 @@
         </div>
     </div>
 
-    <div class="loginLeft"></div>
+    <div class="loginLeft">
+        <video class="loginLeft__video" src="/videos/logo_png.mp4" autoplay></video>
+    </div>
 </div>
 @endsection
