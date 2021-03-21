@@ -1,77 +1,62 @@
 @extends('templates.general')
 
 @section('contenu')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="loginMain">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="registerLeft">
+        <div id="containerRegister">
+            <div class="registerLeft__title">
+                <h1 class="registerLeft__title-title">Register</h1>
+                <div class="registerLeft__title-special"></div>
             </div>
+
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
+                <!-- Div pour la partie nom -->
+                <div>
+                    <input id="name" Placeholder="Name" type="text" class="registerLeft__form-input form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <!-- Div pour la partie email -->
+                <div>
+                    <input id="email" Placeholder="E-mail" type="email" class="registerLeft__form-input form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <!-- Div pour la partie mot de passe -->
+                <div>
+                    <input id="password" Placeholder="Password" type="password" class="registerLeft__form-input form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                </div>
+            
+                <!-- Div pour la partie confirmation du mot de passe -->
+                <div>
+                    <input id="password-confirm" class="registerLeft__form-input" Placeholder="Confirm your password" type="password" name="password_confirmation" required autocomplete="new-password">
+                </div>
+
+                <!-- Bouton de validation -->
+                <button type="submit" class="registerLeft__button">
+                    {{ __('Register') }}
+                </button>
+            </form>
+
+            <p id="accountText">You already have a account ?<a href="/login" id="accountLink">Click here</a></p>
         </div>
     </div>
+
+    <div class="loginLeft"></div>
 </div>
 @endsection

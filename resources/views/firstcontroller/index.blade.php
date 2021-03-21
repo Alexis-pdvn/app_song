@@ -1,5 +1,7 @@
 @extends('templates.general')
 
+@extends('partials._header')
+
 @section('contenu')
 
 <div>
