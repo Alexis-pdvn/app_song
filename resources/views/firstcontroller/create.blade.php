@@ -1,8 +1,6 @@
 @extends('templates.general')
 
 @section('contenu')
-
-    @include("partials._header")
     @include("partials._errors")
 
     <section class="container createMain">

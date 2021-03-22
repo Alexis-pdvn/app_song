@@ -8,6 +8,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 30px;
 }
 
 .header_section_logo img {
@@ -22,7 +23,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
 }
 
 .header_section_formulaire input {
@@ -71,7 +71,7 @@
 }
 
 .header_section_formulaire button img {
-  height: 22px;
+  height: 19px;
   width: auto;
   padding: 7px;
 }
@@ -145,6 +145,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: slidemenu .2s linear alternate;
+          animation: slidemenu .2s linear alternate;
 }
 
 .header_section_nav_icon_a {
@@ -152,7 +154,7 @@
   background-color: #F5F5F5;
   width: 110px;
   right: 58px;
-  top: 70px;
+  top: 80px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   line-height: 30px;
@@ -165,6 +167,15 @@
   color: #0044ff;
   text-decoration: none;
   font-size: 17px;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.header_section_nav_icon_a .hover_menu:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 .header_section_nav_icon_a::before {
@@ -178,6 +189,28 @@
   position: absolute;
   right: 30px;
   top: -15px;
+}
+
+@-webkit-keyframes slidemenu {
+  0% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slidemenu {
+  0% {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 @font-face {
