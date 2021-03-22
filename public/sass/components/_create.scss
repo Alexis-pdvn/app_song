@@ -1,0 +1,48 @@
+.createMain {
+
+    &__title {
+        font-family: "Stretch";
+        font-size: 20pt;
+        color: $basic-blue;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__form {
+
+        &--input {
+            font-size: 11pt;
+            color: $basic-grey;
+
+            background-color: $light-grey;
+            width: 600px;
+
+            padding: 12px 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+
+            margin-bottom: 2rem;
+
+            &::placeholder {
+                color: $basic-grey;
+                font-size: 11pt;
+            }
+        }
+
+        &--file {
+            background-color: unset;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            background-image: url("../../images/icons/upload.png");
+            background-repeat: no-repeat;
+
+            height: 64px;
+            width: auto;
+
+            margin-bottom: 2rem;
+        }
+    }
+}

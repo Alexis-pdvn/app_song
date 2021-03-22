@@ -206,6 +206,78 @@ audio {
   outline: none;
 }
 
+.btn-blue {
+  font-size: 18pt;
+  color: #0044ff;
+  background-color: #ffffff;
+  border: solid 2px #0044ff;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-right: 1rem;
+  margin-bottom: 4rem;
+}
+
+.btn-blue:hover {
+  color: #ffffff;
+  border: solid 2px #0044ff;
+  background-color: #0044ff;
+}
+
+.createMain__title {
+  font-family: "Stretch";
+  font-size: 20pt;
+  color: #0044ff;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.createMain__form--input {
+  font-size: 11pt;
+  color: #606060;
+  background-color: #F5F5F5;
+  width: 600px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+.createMain__form--input::-webkit-input-placeholder {
+  color: #606060;
+  font-size: 11pt;
+}
+
+.createMain__form--input:-ms-input-placeholder {
+  color: #606060;
+  font-size: 11pt;
+}
+
+.createMain__form--input::-ms-input-placeholder {
+  color: #606060;
+  font-size: 11pt;
+}
+
+.createMain__form--input::placeholder {
+  color: #606060;
+  font-size: 11pt;
+}
+
+.createMain__form--file {
+  background-color: unset;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url("../../images/icons/upload.png");
+  background-repeat: no-repeat;
+  height: 64px;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
 .loginMain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,7 +579,7 @@ audio {
 .title_cards {
   color: #0044ff;
   font-family: 'Stretch Pro';
-  font-size: 28px;
+  font-size: 20pt;
   margin: 60px 0 45px 0;
 }
 
@@ -630,7 +702,7 @@ audio {
 .playlist .title_playlist {
   color: #0044ff;
   font-family: 'Stretch Pro';
-  font-size: 28px;
+  font-size: 20pt;
   margin-bottom: 50px;
 }
 

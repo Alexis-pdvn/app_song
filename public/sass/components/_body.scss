@@ -24,3 +24,23 @@ audio {
     border: none;
     outline: none;
 }
+
+
+.btn-blue {
+    font-size: 18pt;
+    color: $basic-blue;
+    background-color: $basic-white;
+    border: solid 2px $basic-blue;
+    border-radius: 5px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 1rem;
+    margin-bottom: 4rem;
+    
+    &:hover {
+        color: $basic-white;
+        border: solid 2px $basic-blue;
+        background-color: $basic-blue;
+    }
+}

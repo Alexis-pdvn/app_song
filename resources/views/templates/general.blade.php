@@ -43,15 +43,6 @@
     <audio controls id="audio">
 </div>
 
-
-<<<<<<< HEAD
-<footer class="footer-section text-center">
-    <div class="container">
-    </div>
-</footer>
-
-=======
->>>>>>> 0cc42ca8c9a6ae812f64ab4e95f2a275f9f5bfd5
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/mixitup.min.js"></script>
 <script src="/js/magnific-popup.min.js"></script>

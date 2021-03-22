@@ -14,8 +14,7 @@
 
         @if (Route::has('login'))
 
-            <h1 class="playlist_nolog">To enjoy your playlist <a class="login_hover" href="{{ route('login') }}">{{ __('connect here') }}</a>
- !</h1>
+            <h1 class="playlist_nolog">To enjoy your playlist <a class="login_hover" href="{{ route('login') }}">{{ __('connect here') }}</a>!</h1>
             
         @endif
 

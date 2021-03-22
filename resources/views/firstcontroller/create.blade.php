@@ -5,23 +5,21 @@
     @include("partials._header")
     @include("partials._errors")
 
-    <section class="container">
+    <section class="container createMain">
 
-        <h1>Upload your musics here</h1>
+        <h1 class="createMain__title">Upload your musics here</h1>
 
         <form method="post" action="/songs"  enctype="multipart/form-data">
             @csrf
-            <div>
+            <div class="createMain__form">
                 <div>
-                    <input type="text" placeholder="Music Title" name="title" value="{{old('title')}}">
+                    <input type="text" class="createMain__form--input" placeholder="Music Title" name="title" value="{{old('title')}}">
                 </div>
                 <div>
-                    <input type="file" placeholder="Choose a file" name="musique">
+                    <input type="file" class="createMain__form--file" name="musique">
                 </div>                    
             </div>
-            <div>
-                <button>Upload</button>
-            </div>
+            <button class="btn-blue">Upload</button>
         </form>
     </section>
 
