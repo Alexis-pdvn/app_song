@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 22px;
 
         &_logo{
             color: $basic-blue;
@@ -10,20 +9,41 @@
             font-size: 36px;
         }
 
-        &_formulaire{
+        &_formulaire {
+            display: flex;
+            align-items: center;
 
             input{
+                color: $basic-grey;
+                font-size: 12pt;
+                font-weight: 100;
+
                 border: unset;
                 outline: unset;
-            }            
 
-            .input-text{
                 background-color: $light-grey;
                 width: 600px;
+                padding: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+            }            
+
+            &::placeholder {
                 color: $basic-grey;
-                font-size: 20px;
+                font-size: 12pt;
+                font-weight: 100;
+
+                background-color: $light-grey;
+                width: 600px;
                 padding: 10px;
                 border-radius: 10px;
+                margin-top: 20px;
+            }
+
+            button {
+                background-color: $light-grey;
+                border: none;
+                outline: none;
             }
         }
 

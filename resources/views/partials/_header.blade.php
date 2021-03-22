@@ -6,7 +6,9 @@
 <!-- Formulaire de recherche -->
     <form class="header_section_formulaire" id="search" method="get" action="/search">
         <input class="input-text" type="text" name="search" Placeholder="Research here an artist or a music">
-        <input type="submit" Value="Go">
+        <button type="submit">
+            <img src="/images/icons/loupe.png" alt="Icone loupe">
+        </button>
     </form>
 
 

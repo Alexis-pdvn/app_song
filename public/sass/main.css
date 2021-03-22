@@ -12,7 +12,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 22px;
 }
 
 .header_section_logo {
@@ -21,18 +20,76 @@
   font-size: 36px;
 }
 
-.header_section_formulaire input {
-  border: unset;
-  outline: unset;
+.header_section_formulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header_section_formulaire .input-text {
+.header_section_formulaire input {
+  color: #606060;
+  font-size: 12pt;
+  font-weight: 100;
+  border: unset;
+  outline: unset;
   background-color: #F5F5F5;
   width: 600px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.header_section_formulaire::-webkit-input-placeholder {
   color: #606060;
-  font-size: 20px;
+  font-size: 12pt;
+  font-weight: 100;
+  background-color: #F5F5F5;
+  width: 600px;
   padding: 10px;
   border-radius: 10px;
+  margin-top: 20px;
+}
+
+.header_section_formulaire:-ms-input-placeholder {
+  color: #606060;
+  font-size: 12pt;
+  font-weight: 100;
+  background-color: #F5F5F5;
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.header_section_formulaire::-ms-input-placeholder {
+  color: #606060;
+  font-size: 12pt;
+  font-weight: 100;
+  background-color: #F5F5F5;
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.header_section_formulaire::placeholder {
+  color: #606060;
+  font-size: 12pt;
+  font-weight: 100;
+  background-color: #F5F5F5;
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.header_section_formulaire button {
+  background-color: #F5F5F5;
+  border: none;
+  outline: none;
 }
 
 .header_section_nav {
@@ -133,6 +190,11 @@ a {
   text-decoration: none;
 }
 
+audio {
+  border: none;
+  outline: none;
+}
+
 .loginMain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,12 +205,6 @@ a {
   background-color: #0044ff;
   width: 50%;
   height: 100vh;
-}
-
-.loginLeft__video {
-  width: 50%;
-  height: auto;
-  z-index: 999;
 }
 
 .loginRight {
