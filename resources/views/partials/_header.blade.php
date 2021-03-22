@@ -40,7 +40,7 @@
             
                         
                         <a class="hover_menu" href="">My Account</a>
-                        <a class="hover_menu" href="">Upload</a>
+                        <a class="hover_menu" href="/songs/create">Upload</a>
                         <a class="hover_menu" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

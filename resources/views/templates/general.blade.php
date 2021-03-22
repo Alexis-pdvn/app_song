@@ -42,22 +42,6 @@
 <audio controls id="audio">
 
 
-<footer class="footer-section text-center">
-    <div class="container">
-            <div class="social-links">
-                <a href=""><span class="fa fa-pinterest"></span></a>
-                <a href=""><span class="fa fa-linkedin"></span></a>
-                <a href=""><span class="fa fa-instagram"></span></a>
-                <a href=""><span class="fa fa-facebook"></span></a>
-                <a href=""><span class="fa fa-twitter"></span></a>
-            </div>
-        <div class="copyright">
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with
-            <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        </div>
-    </div>
-</footer>
-
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/mixitup.min.js"></script>
 <script src="/js/magnific-popup.min.js"></script>
