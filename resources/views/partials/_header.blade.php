@@ -17,6 +17,15 @@
 
         <div class="header_section_nav_icon">
 
+                @guest
+                    @if (Route::has('login'))
+                            <a class="login_hover" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                    @endif
+                    
+                    @if (Route::has('register'))
+                            <a class="register_hover" href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                    @endif
+                @else
 
         <!-- Div avec les icones -->
             <div class="header_section_nav_i">
@@ -26,13 +35,21 @@
         
         <!-- Les liens de nav -->
             <nav class="header_section_nav_icon_a">
-                <a class="hover_menu" href="">My Account</a>
-                <a class="hover_menu" href="">Upload</a>
-                <a class="hover_menu" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
+            
+                        
+                        <a class="hover_menu" href="">My Account</a>
+                        <a class="hover_menu" href="">Upload</a>
+                        <a class="hover_menu" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
+                @endguest
+                
                 <!--@guest
                             @if (Route::has('login'))
                                     <a href="{{ route('login') }}">{{ __('Se connecter') }}</a>
@@ -60,7 +77,6 @@
             </nav>
 
         </div>
-        
         
     </div>
 </header>

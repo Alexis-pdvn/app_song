@@ -94,9 +94,32 @@
 
 .header_section_nav {
   position: relative;
-  /* .header_section_nav_icon:hover nav{
-                opacity: 1;
-            }*/
+}
+
+.header_section_nav_icon .login_hover {
+  color: #0044ff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.header_section_nav_icon .register_hover {
+  color: #0044ff;
+  background-color: #ffffff;
+  border: solid 2px #0044ff;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 1rem;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.header_section_nav_icon .register_hover:hover {
+  color: #ffffff;
+  border: solid 2px #0044ff;
+  background-color: #0044ff;
 }
 
 .header_section_nav_icon .header_section_nav_i {
@@ -135,16 +158,20 @@
 }
 
 .header_section_nav_icon:hover .header_section_nav_icon_a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header_section_nav_icon_a {
   position: absolute;
   background-color: #F5F5F5;
-  width: 170px;
+  width: 110px;
   right: 58px;
   top: 80px;
-  line-height: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 30px;
   padding: 14px 30px 14px 30px;
   border-radius: 5px;
   display: none;
@@ -153,7 +180,7 @@
 .header_section_nav_icon_a .hover_menu {
   color: #0044ff;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 17px;
 }
 
 .header_section_nav_icon_a::before {
