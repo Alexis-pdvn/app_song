@@ -1,7 +1,9 @@
 
 <header class="header_section container">
 
-    <a class="header_section_logo"><span>MMI</span>'SOUND</a>
+    <a href="/" class="header_section_logo">
+        <img src="/images/logo/logo.png" alt="Logo du site">
+    </a>
 
 <!-- Formulaire de recherche -->
     <form class="header_section_formulaire" id="search" method="get" action="/search">
