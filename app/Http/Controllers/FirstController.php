@@ -23,8 +23,9 @@ class FirstController extends Controller{
         $photo->save(); //UPDATE photos set votes = votes+1 WHERE id=1
         $photo->delete(); //DELETE FROM photos WHERE id=1
         die(1); */
-        $songs= Song::all();
-        return view("firstcontroller.index", ["songs" => $songs]);
+        $user = User::inRandomOrder()->limit(4)->get();
+        $songs = Song::all();
+        return view("firstcontroller.index", ["user" => $user, "songs" => $songs]);
         
     }
 
@@ -44,7 +45,7 @@ class FirstController extends Controller{
     public function utilisateur($id) {
       
 
-        $user = User::findOrFail($id); //technique simplifier 
+        $user = User::findOrFail($id); 
 
         return view("firstcontroller.utilisateur", ["user" => $user]);
     }

@@ -665,4 +665,8 @@ audio {
 .playlist .list_Content_time {
   text-align: end;
 }
+
+.audio_div {
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
