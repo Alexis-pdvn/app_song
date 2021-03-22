@@ -19,11 +19,11 @@
 
                 @guest
                     @if (Route::has('login'))
-                            <a class="login_hover" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                            <a class="login_hover" href="{{ route('login') }}">{{ __('Log in') }}</a>
                     @endif
                     
                     @if (Route::has('register'))
-                            <a class="register_hover" href="{{ route('register') }}">{{ __('Créer un compte') }}</a>
+                            <a class="register_hover" href="{{ route('register') }}">{{ __('Create an account') }}</a>
                     @endif
                 @else
 

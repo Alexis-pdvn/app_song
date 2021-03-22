@@ -64,7 +64,7 @@
 <div class="container-fluid p-0">
                 <h2>Retrouvé mes chansons</h2>
     <div class="playlist container">
-        @include("partials._songs", ["songs" => $user->songs]);
+        @include("partials._songs", ["songs" => $user->songs])
 
     </div>
 </div>

@@ -14,6 +14,7 @@
         
 .cardsContent{
     background-color: $light-grey;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     width: 380px;
     padding: 1rem;
@@ -66,6 +67,23 @@
     }
     100%{
         transform: translateX(5px);
+    }
+}
+
+.playlist_nolog{
+    text-align: center;
+    font-size: 25px;
+    color: $basic-grey;
+    margin-top: 100px;
+
+    a{
+        color: $basic-blue;
+        text-decoration: underline;
+        transition: .2s linear;
+
+        &:hover{
+            opacity: 50%;
+        }
     }
 }
 
