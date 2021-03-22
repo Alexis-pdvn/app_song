@@ -7,7 +7,7 @@
 <div class="container">
     
     <div class="discover">
-        @include("partials._songs")
+        @include("partials._cards")
     </div>
 
     @guest

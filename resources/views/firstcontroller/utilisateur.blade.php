@@ -1,5 +1,7 @@
 @extends('templates.general')
 
+@extends('partials._header')
+
 @section('contenu')
 
 <section class="intro-section">
@@ -61,8 +63,8 @@
 
 <div class="container-fluid p-0">
                 <h2>Retrouvé mes chansons</h2>
-    <div class="row portfolio-area">
-    @include("partials._songs", ["songs" => $user->songs]);
+    <div class="playlist container">
+        @include("partials._songs", ["songs" => $user->songs]);
 
     </div>
 </div>
