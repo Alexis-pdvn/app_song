@@ -14,10 +14,9 @@
           align-items: center;
 }
 
-.header_section_logo {
-  color: #0044ff;
-  font-family: 'Stretch Pro';
-  font-size: 36px;
+.header_section_logo img {
+  width: 280px;
+  height: auto;
 }
 
 .header_section_formulaire {
