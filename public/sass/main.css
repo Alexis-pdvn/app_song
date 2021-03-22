@@ -27,6 +27,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 
 .header_section_formulaire input {
@@ -42,54 +43,42 @@
   border-top-left-radius: 10px;
 }
 
-.header_section_formulaire::-webkit-input-placeholder {
+.header_section_formulaire input::-webkit-input-placeholder {
   color: #606060;
   font-size: 12pt;
   font-weight: 100;
-  background-color: #F5F5F5;
-  width: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
 }
 
-.header_section_formulaire:-ms-input-placeholder {
+.header_section_formulaire input:-ms-input-placeholder {
   color: #606060;
   font-size: 12pt;
   font-weight: 100;
-  background-color: #F5F5F5;
-  width: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
 }
 
-.header_section_formulaire::-ms-input-placeholder {
+.header_section_formulaire input::-ms-input-placeholder {
   color: #606060;
   font-size: 12pt;
   font-weight: 100;
-  background-color: #F5F5F5;
-  width: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
 }
 
-.header_section_formulaire::placeholder {
+.header_section_formulaire input::placeholder {
   color: #606060;
   font-size: 12pt;
   font-weight: 100;
-  background-color: #F5F5F5;
-  width: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
 }
 
 .header_section_formulaire button {
   background-color: #F5F5F5;
   border: none;
   outline: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header_section_formulaire button img {
+  height: 22px;
+  width: auto;
+  padding: 7px;
 }
 
 .header_section_nav {
