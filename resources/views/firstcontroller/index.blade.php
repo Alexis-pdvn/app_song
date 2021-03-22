@@ -10,10 +10,22 @@
         @include("partials._songs")
     </div>
 
-    <div class="playlist">
-        @include("partials._playlist")
-    </div>
-        
+    @guest
+
+        @if (Route::has('login'))
+
+            <h1>Connectez vous</h1>
+            
+        @endif
+
+    @else
+
+        <div class="playlist">
+            @include("partials._playlist")
+        </div>
+
+    @endguest
+                        
 </div>
 
 @endsection
