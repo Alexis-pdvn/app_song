@@ -437,6 +437,13 @@ a {
   margin: 0 auto;
 }
 
+.title_cards {
+  color: #0044ff;
+  font-family: 'Stretch Pro';
+  font-size: 28px;
+  margin: 60px 0 45px 0;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,6 +453,16 @@ a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardsContent {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  width: 380px;
+  padding: 1rem;
 }
 
 .cardsContent_user {
@@ -455,9 +472,106 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 1rem;
 }
 
 .cardsContent_user img {
   width: 15%;
+}
+
+.cardsContent_user a {
+  color: #606060;
+  font-size: 20px;
+  padding-left: 5rem;
+  text-transform: capitalize;
+}
+
+.cardsContent_user a i {
+  margin-left: 1rem;
+  -webkit-animation: arrowmove .7s linear infinite alternate;
+          animation: arrowmove .7s linear infinite alternate;
+}
+
+.cardsContent_song {
+  line-height: 25px;
+}
+
+.cardsContent_song div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardsContent_song div .song {
+  color: #0044ff;
+  text-transform: capitalize;
+}
+
+.cardsContent_song div .btn_like {
+  color: red;
+}
+
+@-webkit-keyframes arrowmove {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes arrowmove {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+.playlist {
+  margin-top: 100px;
+}
+
+.playlist .title_playlist {
+  color: #0044ff;
+  font-family: 'Stretch Pro';
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.playlist .list {
+  width: 100%;
+  padding: 0;
+}
+
+.playlist .list_Content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background-color: #F5F5F5;
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 1rem 2rem;
+}
+
+.playlist .list_Content a, .playlist .list_Content p {
+  color: #606060;
+}
+
+.playlist .list_Content_user {
+  text-align: center;
+}
+
+.playlist .list_Content_time {
+  text-align: end;
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,10 +4,15 @@
 
 @section('contenu')
 
-<div>
-    <h1>Découvrez les utilisateurs</h1>
+<div class="container">
     
-    @include("partials._songs")
+    <div class="discover">
+        @include("partials._songs")
+    </div>
+
+    <div class="playlist">
+        @include("partials._playlist")
+    </div>
         
 </div>
 
