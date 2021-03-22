@@ -1,6 +1,5 @@
 <h1 class="title_playlist">Discover my songs :</h1>
 
-<!-- Div enveloppe toutes les cards -->
 <div class="list">
     
 
