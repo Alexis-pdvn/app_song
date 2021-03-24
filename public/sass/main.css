@@ -319,9 +319,19 @@ audio {
 }
 
 .loginLeft {
-  background-color: #0044ff;
+  background-color: #0200FF;
   width: 50%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginLeft video {
+  width: 100%;
 }
 
 .loginRight {

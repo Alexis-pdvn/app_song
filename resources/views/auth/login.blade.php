@@ -32,6 +32,9 @@
     
 <div class="loginMain">
             <div class="loginLeft">
+                <video autoplay loop preload="auto">
+                    <source  src="/video/barrel.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="loginRight">

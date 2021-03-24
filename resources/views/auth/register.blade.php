@@ -87,7 +87,9 @@
     </div>
 
     <div class="loginLeft">
-        <video class="loginLeft__video" src="/videos/logo_png.mp4" autoplay></video>
+        <video autoplay loop preload="auto">
+            <source  src="/video/barrel.mp4" type="video/mp4">
+        </video>
     </div>
 </div>
 
