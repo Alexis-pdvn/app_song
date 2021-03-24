@@ -30,19 +30,17 @@
             }
         }
 
-        &--file {
-            background-color: unset;
-            border: none;
-            outline: none;
-            cursor: pointer;
-
-            background-image: url("../../images/icons/upload.png");
-            background-repeat: no-repeat;
-
-            height: 64px;
-            width: auto;
+        .input_img{
 
             margin-bottom: 2rem;
+
+            label:hover{
+                cursor: pointer;
+            }
+        }
+
+        &--file {
+            display: none;
         }
     }
 }

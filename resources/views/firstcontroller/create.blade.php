@@ -13,8 +13,11 @@
                 <div>
                     <input type="text" class="createMain__form--input" placeholder="Music Title" name="title" value="{{old('title')}}">
                 </div>
-                <div>
-                    <input type="file" class="createMain__form--file" name="musique">
+                <div class="input_img">
+                    <label for="input-file-song">
+                        <img src="/images/icons/upload.png" alt="" srcset="">
+                    </label>
+                    <input type="file" name="song" id="input-file-song" class="createMain__form--file" name="musique">
                 </div>                    
             </div>
             <button class="btn-blue">Upload</button>
