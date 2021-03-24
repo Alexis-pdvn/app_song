@@ -1,7 +1,5 @@
 @extends('templates.general')
 
-@extends('partials._header')
-
 @section('contenu')
 
 <section class="intro-section">
