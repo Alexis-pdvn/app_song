@@ -4,11 +4,11 @@
 
 
 
-@foreach($allsongs as $s )
+@foreach($songs as $s )
 
     <li class="list_Content">
         
-        <div class="list_Content_song">
+    <div class="list_Content_song">
                 <a href="#" data-file="{{$s->url}}" class="song">{{ $s->title }}</a>     
         </div>
 

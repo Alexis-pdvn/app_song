@@ -10,7 +10,7 @@
 
     <!-- Div qui comporte l'img et le nom du user -->
         <div class="cardsContent_user">
-            <img src="{{ $u->avatar }}" alt="">
+            <img src="/uploads/avatars/{{ $u->avatar }}" alt="">
             <a href="/utilisateur/{{ $u->id }}">{{ $u->name }}<i class="fas fa-chevron-right"></i></a>
         </div>
 

@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'email' => "utilisateur1@gmail.com",
             "password" => bcrypt("azerty"),
             'overview' => "J'aime la musique !",
-            'avatar' => "/images/about.jpg"
+            'avatar' => "about.jpg"
         ]);
 
         DB::table("users")->insert([
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'email' => "utilisateur2@gmail.com",
             "password" => bcrypt("azerty"),
             'overview' => "Moi aussi j'aime la musique !",
-            'avatar' => "/images/about.jpg"
+            'avatar' => "about.jpg"
         ]);
 
         DB::table('songs')->insert([

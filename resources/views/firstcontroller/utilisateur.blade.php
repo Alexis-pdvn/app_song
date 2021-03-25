@@ -7,7 +7,45 @@
 
         <div class="userProfile">
             <div class="userProfile__img">
-                <img src="{{ $user->avatar }}" alt="">
+                
+
+
+            @auth
+                @if(Auth::id() !=$user->id)
+                <div class="userProfile__img--edit">
+
+                    <div class="bg-avatar_other-user" style="background-image: url(/uploads/avatars/{{ $user->avatar }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    </div>
+
+                </div>
+
+                @else
+                
+                <form enctype="multipart/form-data" action="/utilisateur/updateoverview" method="POST">
+                    <div class="userProfile__img--edit">
+
+                        <label for="input-file_avatar">
+                            <i class="fas fa-pen-square"></i>
+                        </label>
+
+                        <div class="bg-avatar" style="background-image: url(/uploads/avatars/{{ $user->avatar }}); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        </div>
+
+                    </div>
+
+                    <input type="file" name="avatar" id="input-file_avatar" accept="image/png, image/jpeg, image/jpg" style="display:none" onClick="document.getElementById('btn-update-avatar').style.display = 'block';">
+
+                    <input type="hidden" name="_token" value="{{ csrf_token () }}">
+
+                    <input class="btn-blue" type="submit" value="Update your avatar" id="btn-update-avatar" style="display:none; margin-bottom: 20px;">
+
+                </form>
+                
+                @endif
+            @endauth
+                
+               
+
             </div>
             <div class="userProfile__info">
                 <p class="userProfile__info--descTitle">Description :</p>
