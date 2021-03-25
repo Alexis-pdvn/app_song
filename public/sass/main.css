@@ -912,4 +912,38 @@ audio {
 .audio_div audio {
   width: 100%;
 }
+
+/**
+.testPlayer {
+    height: 100px;
+    background-color: $light-grey;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    > div {
+        display: flex;
+    }
+
+    &__button button {
+        background-color: unset;
+        border: unset;
+        outline: unset;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & img {
+            width: 48px;
+            height: auto;
+        }
+    }
+}
+
+.level {
+    width: 80%;
+}
+**/
 /*# sourceMappingURL=main.css.map */

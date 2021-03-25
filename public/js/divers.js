@@ -1,10 +1,10 @@
 $(document).ready(function() {
     //Partie keep the music playing
     $("a.song").click(function(e) {
-         e.preventDefault();
-         var audio = $('#audio')[0]
-         audio.src =  $(this).attr('data-file')
-         audio.play();
+        e.preventDefault();
+        var audio = $('#audio')[0]
+        audio.src =  $(this).attr('data-file')
+        audio.play();
     })
     
     $(document).pjax('a', '#pjax-container')
@@ -44,4 +44,54 @@ $(document).ready(function() {
             return false;
         }
     });
+
+
+    //Partie Player
+    let prev_btn = document.querySelector("#pre");
+    let play_btn = document.querySelector("#play");
+    let next_btn = document.querySelector("#next");
+    let range = document.querySelector("#range");
+    let total_time = 0;
+    let currentTime = 0;
+    let isPlaying = false;
+
+
+    let song = new Audio();
+    window.onload = playSong;
+
+    function playSong() {
+        console.log(song)
+        
+        
+        play_btn.addEventListener('click', function() {
+            if (!isPlaying) {
+                song.play();
+                isPlaying = true;
+                total_time = song.duration;
+                range.max = total_time;
+                play_img.src = "pause.png";
+            } else {
+                song.pause();
+                isPlaying = false;
+                play_img.src = "play.png";
+        }
+
+        song.addEventListener('ended', function() {
+            song.currentTime = 0
+            song.pause();
+            isPlaying = false;
+            range.value = 0;
+            play_img.src = "play.png";
+        })
+            
+        song.addEventListener('timeupdate', function() {
+            range.value = song.currentTime;
+        })
+            
+        range.addEventListener('change',function() {
+            song.currentTime = range.value;
+        })
+        
+    })
+}
 })

@@ -1,4 +1,3 @@
-
 .audio_div{
     text-align: center;
     background-color: #F1F3F4;
@@ -9,3 +8,37 @@
         width: 100%;
     }
 }
+
+/**
+.testPlayer {
+    height: 100px;
+    background-color: $light-grey;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    > div {
+        display: flex;
+    }
+
+    &__button button {
+        background-color: unset;
+        border: unset;
+        outline: unset;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & img {
+            width: 48px;
+            height: auto;
+        }
+    }
+}
+
+.level {
+    width: 80%;
+}
+**/
