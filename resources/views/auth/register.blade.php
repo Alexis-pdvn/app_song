@@ -76,6 +76,7 @@
                     <input id="password-confirm" class="registerLeft__form-input" Placeholder="Confirm your password" type="password" name="password_confirmation" required autocomplete="new-password">
                 </div>
 
+                
                 <!-- Bouton de validation -->
                 <button type="submit" class="registerLeft__button">
                     {{ __('Register') }}

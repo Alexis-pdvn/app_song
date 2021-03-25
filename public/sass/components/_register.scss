@@ -47,6 +47,11 @@
         }
     }
 
+    .icon_add_img{
+        width: 50px;
+        margin-bottom: 2rem;
+    }
+
     &__button {
         font-size: 18pt;
         color: $basic-blue;
@@ -65,6 +70,7 @@
             background-color: $basic-blue;
         }
     }
+
 
 }
 

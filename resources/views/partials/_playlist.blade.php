@@ -1,3 +1,4 @@
+<div>
 <h1 class="title_playlist">Your playlist</h1>
 <ul class="list">
     
@@ -22,3 +23,4 @@
     
 @endforeach 
 </ul>
+</div>

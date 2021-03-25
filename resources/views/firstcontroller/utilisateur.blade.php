@@ -44,7 +44,7 @@
     </section>
 
     <div>
-        <div class="playlist container">
+        <div class="playlist-user container">
             @include("partials._songs", ["songs" => $user->songs])
         </div>
     </div>

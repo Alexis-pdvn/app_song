@@ -268,6 +268,12 @@ audio {
   margin-bottom: 2rem;
 }
 
+.createMain__form {
+  /* &--file {
+            display: none;
+        }*/
+}
+
 .createMain__form--input {
   font-size: 11pt;
   color: #606060;
@@ -301,18 +307,11 @@ audio {
 }
 
 .createMain__form .input_img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 2rem;
 }
 
 .createMain__form .input_img label:hover {
   cursor: pointer;
-}
-
-.createMain__form--file {
-  display: none;
 }
 
 .userMain {
@@ -365,6 +364,48 @@ audio {
   font-size: 20pt;
   color: #0044ff;
   margin-top: 0.5rem;
+}
+
+.playlist-user {
+  margin-top: 100px;
+}
+
+.playlist-user .title_playlist {
+  color: #0044ff;
+  font-family: 'Stretch Pro';
+  font-size: 20pt;
+  margin: 50px 0px;
+}
+
+.playlist-user .list {
+  width: 100%;
+  height: 30vh;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.playlist-user .list_Content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 1rem 2rem;
+}
+
+.playlist-user .list_Content a, .playlist-user .list_Content p {
+  color: #606060;
+}
+
+.playlist-user .list_Content_user {
+  text-align: center;
+}
+
+.playlist-user .list_Content_time {
+  text-align: end;
 }
 
 .loginMain {
@@ -602,6 +643,11 @@ audio {
   font-size: 12pt;
 }
 
+.registerLeft .icon_add_img {
+  width: 50px;
+  margin-bottom: 2rem;
+}
+
 .registerLeft__button {
   font-size: 18pt;
   color: #0044ff;
@@ -806,6 +852,15 @@ audio {
 
 .playlist {
   margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .playlist .title_playlist {

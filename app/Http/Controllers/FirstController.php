@@ -25,7 +25,9 @@ class FirstController extends Controller{
         die(1); */
         $user = User::inRandomOrder()->limit(4)->get();
         $songs = Song::all();
-        return view("firstcontroller.index", ["user" => $user, "songs" => $songs]);
+        $allsongs = Song::inRandomOrder()->limit(5)->get();
+        $allexcept = User::whereRaw("id <> ?", [Auth::id()])->get();
+        return view("firstcontroller.index", ["user" => $user, "songs" => $songs, "allsongs" => $allsongs, "allexcept" => $allexcept]);
         
     }
 
@@ -71,14 +73,14 @@ class FirstController extends Controller{
         
         $request->validate([
             'title' => 'required|min:4|max:255',  //if(isset($_post['title]))
-            'musique' => 'required|file|mimes:mp3,ogg'
+            'song' => 'required|file|mimes:mp3,ogg'
         ]);
 
       
         $song = new Song();
 
-        $name = $request->file('musique')->hashName();
-        $request->file('musique')->move("uploads/".Auth::id(), $name);
+        $name = $request->file('song')->hashName();
+        $request->file('song')->move("uploads/".Auth::id(), $name);
 
         $song->title = $request->input('title');
         $song->url = "/uploads/".Auth::id()."/".$name;
