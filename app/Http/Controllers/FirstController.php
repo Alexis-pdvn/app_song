@@ -53,7 +53,7 @@ class FirstController extends Controller{
     }
 
     
-    public function search($search){
+    public function search($search) {
         // SELECT * FROM users WHERE name LIKE '$search%'
        $user = User::WhereRaw("name LIKE CONCAT(?, '%')", [$search])->orderBy('id', 'desc')->get();
 
@@ -63,8 +63,7 @@ class FirstController extends Controller{
     }
 
     
-    public function suivre($id)
-    {
+    public function suivre($id) {
         Auth::user()->IlikeThem()->toggle($id);
         return back();
     }
@@ -90,6 +89,14 @@ class FirstController extends Controller{
 
         return redirect("/");
 
+    }
+
+
+    public function updateoverview(Request $request) {
+        $overview = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $request->input('overview'));
+        Auth::user()->overview = $overview;
+        Auth::user()->save();
+        return back();
     }
 
 }
