@@ -268,12 +268,6 @@ audio {
   margin-bottom: 2rem;
 }
 
-.createMain__form {
-  /* &--file {
-            display: none;
-        }*/
-}
-
 .createMain__form--input {
   font-size: 11pt;
   color: #606060;
@@ -314,6 +308,10 @@ audio {
   cursor: pointer;
 }
 
+.createMain__form--file {
+  display: none;
+}
+
 .userMain {
   padding-top: 4rem;
 }
@@ -331,13 +329,99 @@ audio {
   padding-top: 2rem;
 }
 
-.userProfile__img img {
+.userProfile__img--edit {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.userProfile__img--edit .bg-avatar, .userProfile__img--edit .bg-avatar_other-user {
   width: 350px;
   height: auto;
   border-radius: 5px;
+  height: 450px;
   box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
   -webkit-box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
   -moz-box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.userProfile__img--edit i {
+  font-size: 5rem;
+  color: #0044ffc2;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 2;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  visibility: hidden;
+  -webkit-animation: animationhover-out .2s linear alternate;
+          animation: animationhover-out .2s linear alternate;
+}
+
+.userProfile__img--edit:hover .bg-avatar {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.userProfile__img--edit:hover i {
+  visibility: visible;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-animation: animationhover-in .2s linear alternate;
+          animation: animationhover-in .2s linear alternate;
+}
+
+.userProfile__img--edit:hover i:hover {
+  cursor: pointer;
+  color: #0044ff;
+}
+
+@-webkit-keyframes animationhover-in {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes animationhover-in {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes animationhover-out {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes animationhover-out {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 
 .userProfile__info {
@@ -374,7 +458,7 @@ audio {
   color: #0044ff;
   font-family: 'Stretch Pro';
   font-size: 20pt;
-  margin: 50px 0px;
+  margin: 20px 0px 50px 0px;
 }
 
 .playlist-user .list {

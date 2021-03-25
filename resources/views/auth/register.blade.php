@@ -39,7 +39,7 @@
                 <div class="registerLeft__title-special"></div>
             </div>
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
                 <!-- Div pour la partie nom -->
                 <div>
@@ -76,7 +76,14 @@
                     <input id="password-confirm" class="registerLeft__form-input" Placeholder="Confirm your password" type="password" name="password_confirmation" required autocomplete="new-password">
                 </div>
 
-                
+                <!-- Div pour la partie ajout de photo de profil -->
+                <div class="input_img">
+                    <label for="input-file-avatar">
+                        <img class="icon_add_img" src="/images/icons/image.png" alt="" srcset="">
+                    </label>
+                    <input type="file" name="avatar" id="input-file-avatar" class="createMain__form--file" accept="image/png, image/jpeg, image/jpg">
+                </div> 
+
                 <!-- Bouton de validation -->
                 <button type="submit" class="registerLeft__button">
                     {{ __('Register') }}

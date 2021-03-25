@@ -7,6 +7,7 @@ use App\Models\Song;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Image;
 
 class FirstController extends Controller{
     public function index() {
@@ -25,18 +26,9 @@ class FirstController extends Controller{
         die(1); */
         $user = User::inRandomOrder()->limit(4)->get();
         $songs = Song::all();
-        $allsongs = Song::inRandomOrder()->limit(5)->get();
         $allexcept = User::whereRaw("id <> ?", [Auth::id()])->get();
-        return view("firstcontroller.index", ["user" => $user, "songs" => $songs, "allsongs" => $allsongs, "allexcept" => $allexcept]);
+        return view("firstcontroller.index", ["user" => $user, "songs" => $songs , "allexcept" => $allexcept]);
         
-    }
-
-    public function about() {
-        return view("firstcontroller.about");
-    }
-
-    public function article($id) {
-        return view("firstcontroller.article" , ["id" => $id]);
     }
 
     public function create() {
@@ -96,6 +88,17 @@ class FirstController extends Controller{
         $overview = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $request->input('overview'));
         Auth::user()->overview = $overview;
         Auth::user()->save();
+        
+        if($request->hasFile('avatar')) {
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
+
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+        }
+
         return back();
     }
 

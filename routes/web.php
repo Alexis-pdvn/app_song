@@ -15,8 +15,6 @@ use App\Http\Controllers\FirstController;
 */
 
 Route::get('/', [FirstController::class, 'index']);
-Route::get('/about', [FirstController::class, 'about']);
-Route::get('/article/{id}', [FirstController::class, 'article'])->where('id','[0-9]+');
 
 Route::get('/songs/create', [FirstController::class, "create"])->middleware('auth');
 Route::post('/songs', [FirstController::class, "store"])->middleware('auth');
@@ -34,3 +32,5 @@ Route::post("/utilisateur/updateoverview", [FirstController::class, "updateoverv
 Route::get("/newuser", function() {
     return redirect("/utilisateur/".Auth::id());
 });
+
+Route::post('edit', [FirstController::class, "update_avatar"]);
