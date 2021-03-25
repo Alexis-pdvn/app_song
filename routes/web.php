@@ -28,3 +28,9 @@ Route::get('/utilisateur/{id}', [FirstController::class, "utilisateur"])->where(
 Route::get('/suivre/{id}', [FirstController::class, "suivre"])->middleware('auth')->where('id','[0-9]+');
 
 Route::get("/search/{search}", [FirstController::class, "search"]);
+
+Route::post("/utilisateur/updateoverview", [FirstController::class, "updateoverview"])->middleware('auth');
+
+Route::get("/newuser", function() {
+    return redirect("/utilisateur/".Auth::id());
+});

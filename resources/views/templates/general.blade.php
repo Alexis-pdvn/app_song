@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link href="/public/imgages/favicon.ico" rel="shortcut icon" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
@@ -71,7 +69,7 @@
             <nav class="header_section_nav_icon_a">
             
                         
-                        <a class="hover_menu" href="">My Account</a>
+                        <a class="hover_menu" href="/songs/myprofile">My Account</a>
                         <a class="hover_menu" href="/songs/create">Upload</a>
                         <a class="hover_menu" href="{{ route('logout') }}"
                             onclick="event.preventDefault();

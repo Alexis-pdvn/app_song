@@ -11,7 +11,18 @@
             </div>
             <div class="userProfile__info">
                 <p class="userProfile__info--descTitle">Description :</p>
-                <p class="userProfile__info--descText">{{ $user->overview }}</p>
+                <p id="overview" {{Auth::check() && Auth::id() == $user->id ? "contenteditable" : ""}} class="userProfile__info--descText">
+                    {!! $user->overview == null ? "Please add a description" : $user->overview !!}
+                </p>
+
+                @if(Auth::check() && Auth::id() == $user->id)
+                    <form id="overviewform" method="post" action="/utilisateur/updateoverview">
+                        @csrf
+                        <input type="hidden" name="overview"/>
+                        <button type="submit" class="btn-blue">Valider</button>
+                    </form>
+                @endif
+
                     <div class="userProfile__info--fieldMain">
                         <div>
                             <div>
