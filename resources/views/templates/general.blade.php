@@ -123,16 +123,16 @@
     <audio controls id="audio">
 </div> 
 
-<!-- <div class="testPlayer">
+<div class="testPlayer">
     <div class="container">
         <div class="buttons testPlayer__button">
             <button id="pre"><img src="/images/icons/previous_button.png"></button>
             <button id="play"><img id="play_img" src="/images/icons/play_button.png"></button>
             <button id="next"><img src="/images/icons/next_button.png"></button>
         </div>
-        <input id="range audio" class="level" type="range" value="0" min="0"> 
+        <input id="range" class="level" type="range" value="0" min="0"> 
     </div>
-</div> -->
+</div>
 
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/mixitup.min.js"></script>

@@ -56,7 +56,7 @@ $(document).ready(function() {
     let isPlaying = false;
 
 
-    let song = new Audio();
+    let song = document.querySelector("#audio");
     window.onload = playSong;
 
     function playSong() {
