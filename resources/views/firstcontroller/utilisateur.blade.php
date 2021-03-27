@@ -3,7 +3,13 @@
 @section('contenu')
 
     <section class="container userMain">
-        <h2>You are on the <span>{{$user->name}}</span>'s profile</h2>
+        @auth
+            @if(Auth::id() !=$user->id)
+                <h2>You are on the <span>{{$user->name}}</span>'s profile</h2>
+                @else
+                    <h2>You are on your profile</h2>
+            @endif
+        @endauth
 
         <div class="userProfile">
             <div class="userProfile__img">
@@ -57,24 +63,24 @@
                     <form id="overviewform" method="post" action="/utilisateur/updateoverview">
                         @csrf
                         <input type="hidden" name="overview"/>
-                        <button type="submit" class="btn-blue">Valider</button>
+                        <button type="submit" class="btn-blue">Change</button>
                     </form>
                 @endif
 
                     <div class="userProfile__info--fieldMain">
                         <div>
                             <div>
-                                <h2 class="userProfile__info--field">{{$user->theyLikeMe()->count()}}<span>&nbsp; Subscription</span></h2>
+                                <h2 class="userProfile__info--field">{{$user->theyLikeMe()->count()}}<span>&nbsp; Subscription(s)</span></h2>
                             </div>
                         </div>
                         <div>
                             <div>
-                                <h2 class="userProfile__info--field">{{$user->ILikeThem()->count()}}<span>&nbsp; Subscriber</span></h2>
+                                <h2 class="userProfile__info--field">{{$user->ILikeThem()->count()}}<span>&nbsp; Subscriber(s)</span></h2>
                             </div>
                         </div>
                         <div>
                             <div>
-                                <h2 class="userProfile__info--field">{{$user->songs()->count()}}<span>&nbsp; Songs</span></h2>
+                                <h2 class="userProfile__info--field">{{$user->songs()->count()}}<span>&nbsp; Song(s)</span></h2>
                             </div>
                         </div>
                     </div>
@@ -82,9 +88,9 @@
                     @auth
                         @if(Auth::id() !=$user->id)
                             @if(Auth::user()->ILikeThem->contains($user->id))
-                                <a href="/suivre/{{ $user->id }}">Suivi</a>
+                                <a href="/suivre/{{ $user->id }}">Followed</a>
                             @else
-                                <a href="/suivre/{{ $user->id }}">Suivre</a>
+                                <a href="/suivre/{{ $user->id }}">Follow</a>
                             @endif
                         @endif
                     @endauth

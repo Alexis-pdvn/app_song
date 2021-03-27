@@ -15,7 +15,7 @@
 
 
             input{
-                color: $basic-grey;
+                color: $medium-grey;
                 font-size: 12pt;
                 font-weight: 100;
 
@@ -29,7 +29,7 @@
                 border-top-left-radius: 10px;
 
                 &::placeholder {
-                    color: $basic-grey;
+                    color: $medium-grey;
                     font-size: 12pt;
                     font-weight: 100;
                 }

@@ -49,6 +49,7 @@ $(document).ready(function() {
     //Partie Player
     let play_btn = document.querySelector("#play");
     let range = document.querySelector("#timeRange");
+    let volume = document.querySelector("#volumeRange");
     let total_time = 0;
     let currentTime = 0;
     let isPlaying = false;
@@ -58,8 +59,6 @@ $(document).ready(function() {
     window.onload = playSong;
 
     function playSong() {
-        console.log(song)
-        
         
         play_btn.addEventListener('click', function() {
             if (!isPlaying) {
@@ -89,16 +88,10 @@ $(document).ready(function() {
         range.addEventListener('change',function() {
             song.currentTime = range.value;
         })
-        
-    })
 
-
-    let volume = doncument.querySelector("volumeRange"); 
-
-    volume.addEventListener("mousemove", function(){
-        var x = volume.value; 
-        var color = "linear-gradient(90deg, rgb(0,68,255,1)" + x + "%, rgb(0,68,255,1)" + x + "%)";
-        volume.style.background = color;
+        volume.addEventListener('click', function() {
+            song.volume();
+        })
     });
 
 }

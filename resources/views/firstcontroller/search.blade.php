@@ -1,17 +1,15 @@
 @extends('templates.general')
 
 @section('contenu')
-    <h1>Recherche de {{$search}}</h1>
 
-    <h4>Utilisataeurs</h4>
+    <div class="container searchMain">
+    <h1 class="searchMain__title">Recherche de : {{$search}}</h1>   
 
-<ul>
-@foreach($users as $s )
-            <li><a href="/utilisateur/{{$s->id}}">{{ $s->name }}</a></li>
-@endforeach 
-</ul>
-
-<h4>CHansons</h4>
-@include("partials._songs");
+        <ul>
+            @foreach($users as $s)
+                <li><a href="/utilisateur/{{$s->id}}">{{ $s->name }}</a></li>
+            @endforeach 
+        </ul>
+    </div>
 
 @endsection

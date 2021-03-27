@@ -26,7 +26,7 @@
 }
 
 .header_section_formulaire input {
-  color: #606060;
+  color: #ababab;
   font-size: 12pt;
   font-weight: 100;
   border: unset;
@@ -39,25 +39,25 @@
 }
 
 .header_section_formulaire input::-webkit-input-placeholder {
-  color: #606060;
+  color: #ababab;
   font-size: 12pt;
   font-weight: 100;
 }
 
 .header_section_formulaire input:-ms-input-placeholder {
-  color: #606060;
+  color: #ababab;
   font-size: 12pt;
   font-weight: 100;
 }
 
 .header_section_formulaire input::-ms-input-placeholder {
-  color: #606060;
+  color: #ababab;
   font-size: 12pt;
   font-weight: 100;
 }
 
 .header_section_formulaire input::placeholder {
-  color: #606060;
+  color: #ababab;
   font-size: 12pt;
   font-weight: 100;
 }
@@ -313,7 +313,7 @@ audio {
 }
 
 .userMain {
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 .userMain > h2 {
@@ -335,10 +335,11 @@ audio {
 }
 
 .userProfile__img--edit .bg-avatar, .userProfile__img--edit .bg-avatar_other-user {
-  width: 350px;
-  height: auto;
-  border-radius: 5px;
+  width: 400px;
+  border-radius: 10px;
   height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
   -webkit-box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
   -moz-box-shadow: -1px 9px 11px -1px rgba(161, 161, 161, 0.71);
@@ -361,14 +362,15 @@ audio {
 }
 
 .userProfile__img--edit:hover .bg-avatar {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  -webkit-filter: blur(2px) grayscale(100%);
+          filter: blur(2px) grayscale(100%);
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
 
 .userProfile__img--edit:hover i {
   visibility: visible;
+  color: #0044ff;
   -webkit-transition: .2s linear;
   transition: .2s linear;
   -webkit-animation: animationhover-in .2s linear alternate;
@@ -377,7 +379,6 @@ audio {
 
 .userProfile__img--edit:hover i:hover {
   cursor: pointer;
-  color: #0044ff;
 }
 
 @-webkit-keyframes animationhover-in {
@@ -490,6 +491,13 @@ audio {
 
 .playlist-user .list_Content_time {
   text-align: end;
+}
+
+.searchMain__title {
+  font-family: "Stretch";
+  font-size: 20pt;
+  color: #0044ff;
+  margin-top: 5rem;
 }
 
 .loginMain {
@@ -819,7 +827,7 @@ audio {
   color: #0044ff;
   font-family: 'Stretch Pro';
   font-size: 20pt;
-  margin: 60px 0 45px 0;
+  margin: 5rem 0rem 3rem 0rem;
 }
 
 .cards {
@@ -841,8 +849,9 @@ audio {
   -webkit-box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
-  width: 380px;
-  padding: 1rem;
+  width: 400px;
+  height: 150px;
+  padding: 2rem;
 }
 
 .cardsContent_user {
@@ -856,24 +865,35 @@ audio {
 }
 
 .cardsContent_user img {
-  width: 15%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cardsContent_user a {
   color: #606060;
-  font-size: 20px;
-  padding-left: 5rem;
+  font-size: 18pt;
+  padding-left: 1.5rem;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .cardsContent_user a i {
-  margin-left: 1rem;
-  -webkit-animation: arrowmove .7s linear infinite alternate;
-          animation: arrowmove .7s linear infinite alternate;
+  margin-left: 1.2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cardsContent_user a:hover i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .cardsContent_song {
-  line-height: 25px;
+  margin-top: 0.6rem;
+  line-height: 28px;
 }
 
 .cardsContent_song div {
@@ -894,28 +914,6 @@ audio {
   color: red;
 }
 
-@-webkit-keyframes arrowmove {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-}
-
-@keyframes arrowmove {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-}
-
 .playlist_nolog {
   text-align: center;
   font-size: 25px;
@@ -925,13 +923,12 @@ audio {
 
 .playlist_nolog a {
   color: #0044ff;
-  text-decoration: underline;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .playlist_nolog a:hover {
-  opacity: 50%;
+  text-decoration: underline;
 }
 
 .playlist {
@@ -1016,7 +1013,7 @@ audio {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem 0px;
+  padding: 1.6rem 0px;
 }
 
 .playerMain__button button {
@@ -1052,10 +1049,8 @@ audio {
   background-color: #0044ff;
   -webkit-box-shadow: 2px 2px 5px #A2B1C6 , -2px -2px 5px  #fff;
           box-shadow: 2px 2px 5px #A2B1C6 , -2px -2px 5px  #fff;
-  width: 20px;
-  /* Set a specific slider handle width */
-  height: 20px;
-  /* Slider handle height */
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 }
 
@@ -1067,7 +1062,7 @@ audio {
 .playerMain__volumeIcon {
   width: 42px;
   height: auto;
-  margin-left: 6rem;
+  margin-left: 8rem;
   margin-right: 2rem;
 }
 
@@ -1075,7 +1070,7 @@ audio {
   width: 100%;
   height: 10px;
   border-radius: 50px;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   outline: none;
   border: none;
   -webkit-appearance: none;
@@ -1088,10 +1083,8 @@ audio {
   background-color: #0044ff;
   -webkit-box-shadow: 2px 2px 5px #A2B1C6 , -2px -2px 5px  #fff;
           box-shadow: 2px 2px 5px #A2B1C6 , -2px -2px 5px  #fff;
-  width: 20px;
-  /* Set a specific slider handle width */
-  height: 20px;
-  /* Slider handle height */
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 }
 

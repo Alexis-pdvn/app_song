@@ -12,7 +12,7 @@
     color: $basic-blue;
     font-family: 'Stretch Pro';
     font-size: 20pt;
-    margin: 60px 0 45px 0;
+    margin: 5rem 0rem 3rem 0rem;
 }
 
 .cards{
@@ -26,8 +26,9 @@
     background-color: $light-grey;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
-    width: 380px;
-    padding: 1rem;
+    width: 400px;
+    height: 150px;
+    padding: 2rem;
 
     &_user{
         display: flex;
@@ -35,24 +36,33 @@
         padding-bottom: 1rem;
 
             img{
-                width: 15%;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                object-fit: contain;
             }
             
             a{
                 color: $basic-grey;
-                font-size: 20px;
-                padding-left: 5rem;
+                font-size: 18pt;
+                padding-left: 1.5rem;
                 text-transform: capitalize;
+                font-weight: 500;
 
                 i{
-                    margin-left: 1rem;
-                    animation: arrowmove .7s linear infinite alternate;
+                    margin-left: 1.2rem;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                &:hover i {
+                    transform: translateX(10px);
                 }
             }
     }
 
     &_song{
-        line-height:25px;
+        margin-top: 0.6rem;
+        line-height:28px;
 
         div{
             display: flex;
@@ -71,14 +81,6 @@
 
 }
 
-@keyframes arrowmove{
-    0%{
-        transform: translate(0);
-    }
-    100%{
-        transform: translateX(5px);
-    }
-}
 
 .playlist_nolog{
     text-align: center;
@@ -88,11 +90,10 @@
 
     a{
         color: $basic-blue;
-        text-decoration: underline;
-        transition: .2s linear;
+        transition: all 0.2s ease-in-out;
 
         &:hover{
-            opacity: 50%;
+            text-decoration: underline;
         }
     }
 }
