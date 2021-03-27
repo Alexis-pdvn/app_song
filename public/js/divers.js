@@ -47,10 +47,8 @@ $(document).ready(function() {
 
 
     //Partie Player
-    let prev_btn = document.querySelector("#pre");
     let play_btn = document.querySelector("#play");
-    let next_btn = document.querySelector("#next");
-    let range = document.querySelector("#range");
+    let range = document.querySelector("#timeRange");
     let total_time = 0;
     let currentTime = 0;
     let isPlaying = false;
@@ -69,11 +67,11 @@ $(document).ready(function() {
                 isPlaying = true;
                 total_time = song.duration;
                 range.max = total_time;
-                play_img.src = "pause.png";
+                play_img.src = "/images/icons/pause_button.png";
             } else {
                 song.pause();
                 isPlaying = false;
-                play_img.src = "play.png";
+                play_img.src = "/images/icons/play_button.png";
         }
 
         song.addEventListener('ended', function() {
@@ -81,7 +79,7 @@ $(document).ready(function() {
             song.pause();
             isPlaying = false;
             range.value = 0;
-            play_img.src = "play.png";
+            play_img.src = "/images/icons/pause_button.png";
         })
             
         song.addEventListener('timeupdate', function() {
@@ -93,5 +91,15 @@ $(document).ready(function() {
         })
         
     })
+
+
+    let volume = doncument.querySelector("volumeRange"); 
+
+    volume.addEventListener("mousemove", function(){
+        var x = volume.value; 
+        var color = "linear-gradient(90deg, rgb(0,68,255,1)" + x + "%, rgb(0,68,255,1)" + x + "%)";
+        volume.style.background = color;
+    });
+
 }
 })

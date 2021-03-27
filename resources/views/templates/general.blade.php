@@ -123,14 +123,22 @@
     <audio controls id="audio">
 </div> 
 
-<div class="testPlayer">
-    <div class="container">
-        <div class="buttons testPlayer__button">
-            <button id="pre"><img src="/images/icons/previous_button.png"></button>
+<div class="playerMain">
+    <div class="container playerMain__div">
+        <div class="buttons playerMain__button">
+            <!-- <button id="pre"><img src="/images/icons/previous_button.png"></button> -->
             <button id="play"><img id="play_img" src="/images/icons/play_button.png"></button>
-            <button id="next"><img src="/images/icons/next_button.png"></button>
+            <!-- <button id="next"><img src="/images/icons/next_button.png"></button> -->
         </div>
-        <input id="range" class="level" type="range" value="0" min="0"> 
+        <div>
+            <input id="timeRange" class="playerMain__timer" type="range" value="0" min="0"> 
+        </div>
+        <div>
+            <img class="playerMain__volumeIcon" src="/images/icons/volume_button.png" alt="icone volume button">
+        </div>
+        <div>
+            <input id="volumeRange" class="playerMain__volume" type="range" value="1" min="1" max="100">
+        </div>
     </div>
 </div>
 
