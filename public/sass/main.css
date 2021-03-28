@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,6 +499,41 @@ audio {
   font-size: 20pt;
   color: #0044ff;
   margin-top: 5rem;
+}
+
+.searchMain__list {
+  list-style: none;
+}
+
+.searchMain__list a {
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+  font-size: 16pt;
+  line-height: 32px;
+  margin-left: -1.3rem;
+}
+
+.searchMain__list a:hover::after {
+  content: "→";
+  padding-left: 1rem;
+}
+
+.errorMain {
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.errorMain__first {
+  font-family: "Stretch";
+  font-size: 102pt;
+  color: #0044ff;
+}
+
+.errorMain__second {
+  font-family: 'Montserrat';
+  font-size: 26pt;
+  color: #606060;
+  margin-bottom: 6rem;
 }
 
 .loginMain {

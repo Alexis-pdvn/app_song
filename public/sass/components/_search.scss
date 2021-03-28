@@ -7,4 +7,23 @@
 
         margin-top: 5rem;
     }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__list a {
+        font-family: 'Montserrat', sans-serif;
+        color: $basic-grey;
+        font-size: 16pt;
+        line-height: 32px;  
+
+        margin-left: -1.3rem;
+
+        &:hover::after {
+            content: "→";
+            padding-left: 1rem;
+        }
+
+    }
 }

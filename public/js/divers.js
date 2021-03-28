@@ -49,7 +49,6 @@ $(document).ready(function() {
     //Partie Player
     let play_btn = document.querySelector("#play");
     let range = document.querySelector("#timeRange");
-    let volume = document.querySelector("#volumeRange");
     let total_time = 0;
     let currentTime = 0;
     let isPlaying = false;
@@ -88,11 +87,6 @@ $(document).ready(function() {
         range.addEventListener('change',function() {
             song.currentTime = range.value;
         })
-
-        volume.addEventListener('click', function() {
-            song.volume();
-        })
     });
-
 }
 })

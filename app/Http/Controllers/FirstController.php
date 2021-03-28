@@ -101,6 +101,4 @@ class FirstController extends Controller{
 
         return back();
     }
-
 }
-

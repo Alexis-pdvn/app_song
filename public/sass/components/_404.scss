@@ -1,0 +1,18 @@
+.errorMain {
+    text-align: center;
+    padding-top: 10rem;
+
+    &__first {
+        font-family: "Stretch";
+        font-size: 102pt;
+        color: $basic-blue;
+    }
+
+    &__second {
+        font-family: 'Montserrat';
+        font-size: 26pt;
+        color: $basic-grey;
+
+        margin-bottom: 6rem;
+    }
+}
