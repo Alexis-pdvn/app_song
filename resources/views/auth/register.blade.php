@@ -78,10 +78,11 @@
 
                 <!-- Div pour la partie ajout de photo de profil -->
                 <div class="input_img">
-                    <label for="input-file-avatar">
+                    <label for="input-file_avatar">
                         <img class="icon_add_img" src="/images/icons/image.png" alt="" srcset="">
                     </label>
-                    <input type="file" name="avatar" id="input-file-avatar" class="createMain__form--file" accept="image/png, image/jpeg, image/jpg">
+                    <input type="file" name="avatar" id="input-file_avatar" accept="image/png, image/jpeg, image/jpg" style="display:none" >
+                    <input type="hidden" name="_token" value="{{csrf_token()}}" >
                 </div> 
 
                 <!-- Bouton de validation -->

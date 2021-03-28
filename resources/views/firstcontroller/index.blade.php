@@ -22,13 +22,14 @@
             @auth
                 @include("partials._playlist", ["songs" => Auth::user()->songs])
             
-            @endauth
+            
 
                 
             @foreach($allexcept as $u)
                 @include("partials._newsong", ["songs" => $u->songs])
             @endforeach
-
+            
+@endauth
         </div>
 
     @endguest 

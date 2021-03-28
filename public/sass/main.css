@@ -774,6 +774,7 @@ audio {
 .registerLeft .icon_add_img {
   width: 50px;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .registerLeft__button {
@@ -904,8 +905,6 @@ audio {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .cardsContent_user a {

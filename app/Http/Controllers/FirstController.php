@@ -11,19 +11,7 @@ use Image;
 
 class FirstController extends Controller{
     public function index() {
-
-    /* $photo = new Photo();
-        $photo->title = "Nouvelle photo";
-        $photo->url = "/images/Portfolio/1.jpg";
-        $photo->votes = 22;
-        $photo->save();  //INSERT into photos VALUES (Null,..,..,..)
-        die(1);
-
-        $photo = Photo::find(1); //SELECT * FROM photos where id=1
-        $photo->votes++;
-        $photo->save(); //UPDATE photos set votes = votes+1 WHERE id=1
-        $photo->delete(); //DELETE FROM photos WHERE id=1
-        die(1); */
+        
         $user = User::inRandomOrder()->limit(4)->get();
         $songs = Song::all();
         $allexcept = User::whereRaw("id <> ?", [Auth::id()])->get();

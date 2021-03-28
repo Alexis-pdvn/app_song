@@ -69,6 +69,7 @@
             <nav class="header_section_nav_icon_a">
             
                         
+                        <a class="hover_menu" href="/">Home</a>
                         <a class="hover_menu" href="/utilisateur/{{ Auth::user()->id }}">My Account</a>
                         <a class="hover_menu" href="/songs/create">Upload</a>
                         <a class="hover_menu" href="{{ route('logout') }}"
