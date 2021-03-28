@@ -34,6 +34,10 @@
 
     <div class="registerLeft">
         <div id="containerRegister">
+            <a href="/" class="resetMain__back" id="registerBack">
+                <img src="/images/icons/left-arrow.png" alt="Left arrow icon">
+                <p>Back</p>
+            </a>
             <div class="registerLeft__title">
                 <h1 class="registerLeft__title-title">Register</h1>
                 <div class="registerLeft__title-special"></div>

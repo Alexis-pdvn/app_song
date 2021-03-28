@@ -39,6 +39,10 @@
 
             <div class="loginRight">
                 <div id="containerLogin">
+                    <a href="/" class="resetMain__back" id="loginBack">
+                        <img src="/images/icons/left-arrow.png" alt="Left arrow icon">
+                        <p>Back</p>
+                    </a>
                     <div class="loginRight__title">
                         <h1 class="loginRight__title-title">Login</h1>
                         <div class="loginRight__title-special"></div>

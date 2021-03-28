@@ -536,6 +536,100 @@ audio {
   margin-bottom: 6rem;
 }
 
+.resetMain {
+  width: 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: loadReset 1s ease-in-out;
+          animation: loadReset 1s ease-in-out;
+}
+
+.resetMain__back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resetMain__back > img {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.resetMain__back > p {
+  margin-left: 1rem;
+  color: #ababab;
+  font-size: 12pt;
+}
+
+.resetMain__back:hover img {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.resetMain__title {
+  font-family: "Stretch";
+  font-size: 32pt;
+  color: #0044ff;
+  margin-top: 5rem;
+}
+
+.resetMain__title > span {
+  margin-left: -1.3rem;
+}
+
+.resetMain__input {
+  padding: 12px 18px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border: none;
+  outline: none;
+  width: 78%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  color: #606060;
+  font-size: 12pt;
+}
+
+#containerReset {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@-webkit-keyframes loadReset {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes loadReset {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 .loginMain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,6 +765,10 @@ audio {
   margin-right: 4rem;
 }
 
+#loginBack {
+  margin-bottom: 4rem;
+}
+
 .loginRight {
   -webkit-animation: loadLogin 1s ease-in-out;
           animation: loadLogin 1s ease-in-out;
@@ -799,6 +897,10 @@ audio {
 #containerRegister {
   margin-left: 4rem;
   margin-right: 4rem;
+}
+
+#registerBack {
+  margin-bottom: 2rem;
 }
 
 .registerLeft {
