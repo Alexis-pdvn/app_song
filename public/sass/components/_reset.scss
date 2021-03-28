@@ -1,0 +1,74 @@
+.resetMain {
+    width: 50%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    animation: loadReset 1s ease-in-out;
+
+    &__back {
+        display: flex;
+        align-items: center;
+
+        > img {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        > p {
+            margin-left: 1rem;
+            color: $medium-grey;
+            font-size: 12pt;
+        }
+
+        &:hover img {
+            transform: translateX(-10px);
+        }
+    }
+
+    &__title {
+        font-family: "Stretch";
+        font-size: 32pt;
+        color: $basic-blue;
+
+        margin-top: 5rem;
+
+        > span {
+            margin-left: -1.3rem;
+        }
+    }
+
+    &__input {
+        padding: 12px 18px;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        background-color: $light-grey;
+        border: none;
+        outline: none;
+        width: 78%;
+
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+
+        color: $basic-grey;
+        font-size: 12pt;
+    }
+}
+
+#containerReset {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+/// Animation du bloc au chargement de la page
+@keyframes loadReset {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
