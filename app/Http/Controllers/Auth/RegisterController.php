@@ -78,7 +78,7 @@ class RegisterController extends Controller
 
             $avatar = request()->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename) );
+            Image::make($avatar)->save( public_path('/uploads/avatars/' . $filename) );
 
             $user->update(['avatar' => $filename]);
 
