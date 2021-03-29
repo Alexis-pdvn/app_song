@@ -1,7 +1,7 @@
 <div>
 <h1 class="title_playlist">Discover my songs :</h1>
 
-<div class="list">
+<ul class="list">
     
 
 @foreach($songs as $s )
@@ -22,6 +22,6 @@
 
     </li>
 @endforeach 
-</div>
+</ul>
 
 </div>

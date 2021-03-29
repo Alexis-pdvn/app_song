@@ -3,20 +3,17 @@
 @section('contenu')
 
     <section class="container userMain">
-        @auth
             @if(Auth::id() !=$user->id)
                 <h2>You are on the <span>{{$user->name}}</span>'s profile</h2>
                 @else
                     <h2>You are on your profile</h2>
             @endif
-        @endauth
 
         <div class="userProfile">
             <div class="userProfile__img">
                 
 
 
-            @auth
                 @if(Auth::id() !=$user->id)
                 <div class="userProfile__img--edit">
 
@@ -48,8 +45,6 @@
                 </form>
                 
                 @endif
-            @endauth
-                
                
 
             </div>
@@ -88,9 +83,9 @@
                     @auth
                         @if(Auth::id() !=$user->id)
                             @if(Auth::user()->ILikeThem->contains($user->id))
-                                <a href="/suivre/{{ $user->id }}">Followed</a>
+                                <a href="/suivre/{{ $user->id }}" class="btn_add">Followed <i class="fas fa-check-circle"></i></a>
                             @else
-                                <a href="/suivre/{{ $user->id }}">Follow</a>
+                                <a href="/suivre/{{ $user->id }}" class="btn_add">Follow</a>
                             @endif
                         @endif
                     @endauth
@@ -98,8 +93,8 @@
         </div>
     </section>
 
-    <div>
-        <div class="playlist-user container">
+    <div class="container">
+        <div class="playlist-user">
             @include("partials._songs", ["songs" => $user->songs])
         </div>
     </div>
