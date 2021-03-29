@@ -54,7 +54,6 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar' => ['required'],
         ]);
     }
 
@@ -66,19 +65,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $filename = 'about.jpg';
 
-        $request = app('request');
-        if($request->hasfile('avatar')){
-            $avatar = $request->file('avatar');
-            $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename) );
-        }
-       
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'avatar' => $filename,
         ]);
+
+        if(request()->hasfile('avatar')){
+
+            $avatar = request()->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename) );
+
+            $user->update(['avatar' => $filename]);
+
+        }
+
+        return $user;
     }
 }
