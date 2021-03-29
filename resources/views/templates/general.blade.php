@@ -31,9 +31,7 @@
 
 <header class="header_section container">
 
-    <a href="/" class="header_section_logo">
-        <img src="/images/logo/logo.png" alt="Logo du site">
-    </a>
+    <a href="/" class="header_section_logo">soundrop</a>
 
 <!-- Formulaire de recherche -->
     <form class="header_section_formulaire" id="search" method="get" action="/search">

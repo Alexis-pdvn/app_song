@@ -4,9 +4,11 @@
     align-items: center;
     padding-top: 30px;
 
-        &_logo img {
-            width: 280px;
-            height: auto;
+        &_logo{
+            color: $basic-blue;
+            text-transform: uppercase;
+            font-family: 'stretch pro';
+            font-size: 30pt;
         }
 
         &_formulaire {

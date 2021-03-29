@@ -12,9 +12,11 @@
   padding-top: 30px;
 }
 
-.header_section_logo img {
-  width: 280px;
-  height: auto;
+.header_section_logo {
+  color: #0044ff;
+  text-transform: uppercase;
+  font-family: 'stretch pro';
+  font-size: 30pt;
 }
 
 .header_section_formulaire {
