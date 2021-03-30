@@ -28,6 +28,10 @@
                 color: $basic-grey;
                 font-size: 11pt;
             }
+
+            @include lg() {
+                width: 100%;
+            }
         }
 
         .input_img{
@@ -47,7 +51,12 @@
     .flex_div{
         display: flex;
         justify-content: space-between;
+
+        @include lg() {
+            flex-direction: column;
+        }
     }
+
     .listcreate{
         margin-top: 4rem;
     
@@ -83,6 +92,10 @@
                     text-align: end;                
                     color: $basic-grey;    
                 }
+            }
+
+            @include lg() {
+                width: 100%;
             }
         }
     

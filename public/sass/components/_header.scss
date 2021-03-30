@@ -9,6 +9,22 @@
             text-transform: uppercase;
             font-family: 'stretch pro';
             font-size: 30pt;
+
+            @include lg() {
+                font-size: 26pt;
+            }
+
+            @include md() {
+                font-size: 22pt;
+            }
+
+            @include sm() {
+                font-size: 18pt;
+            }
+
+            @include xs() {
+                font-size: 16pt;
+            }
         }
 
         &_formulaire {
@@ -29,6 +45,18 @@
                 padding: 10px;
                 border-bottom-left-radius: 10px;
                 border-top-left-radius: 10px;
+
+                @include lg() {
+                    width: 380px;
+                }
+
+                @include md() {
+                    width: 250px;
+                }
+
+                @include xxxs() {
+                    width: 60px;
+                }
 
                 &::placeholder {
                     color: $medium-grey;

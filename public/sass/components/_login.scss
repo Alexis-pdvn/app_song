@@ -12,6 +12,10 @@
     video{
         width: 100%;
     }
+
+    @include sm() {
+        display: none;
+    }
 }
 
 .loginRight {
@@ -32,6 +36,10 @@
             font-family: "Stretch";
             color: $basic-blue;
             font-size: 42pt;
+
+            @include xxs() {
+                font-size: 28pt;
+            }
         }
 
         &-special {
@@ -39,6 +47,10 @@
             width: 65%;
             background-color: $basic-blue;
             margin-bottom: 15px;
+
+            @include xxs() {
+                margin-bottom: 0.6rem;
+            }
         }
     }
 
@@ -55,6 +67,10 @@
 
             color: $basic-grey;
             font-size: 12pt;
+
+            @include xxs() {
+                width: 90%;
+            }
 
             &::placeholder {
                 color: $basic-grey;
@@ -96,11 +112,20 @@
             background-color: $basic-blue;
         }
     }
+
+    @include sm() {
+        width: 100%;
+    }
 }
 
 #containerLogin {
     margin-left: 4rem;
     margin-right: 4rem;
+
+    @include xxs() {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 #loginBack {

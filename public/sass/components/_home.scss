@@ -58,6 +58,11 @@
             }
     }
 
+    @include lg() {
+        width: 200px;
+        height: 120px;
+    }
+
     &_song{
         margin-top: 0.6rem;
         line-height:28px;
@@ -137,6 +142,10 @@
                 color: $basic-grey;    
             }
         }
+    }
+
+    @include lg() {
+        flex-direction: column;
     }
 
 }

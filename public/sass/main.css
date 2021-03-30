@@ -19,6 +19,30 @@
   font-size: 30pt;
 }
 
+@media screen and (max-width: 1200px) {
+  .header_section_logo {
+    font-size: 26pt;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .header_section_logo {
+    font-size: 22pt;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header_section_logo {
+    font-size: 18pt;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .header_section_logo {
+    font-size: 16pt;
+  }
+}
+
 .header_section_formulaire {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,6 +63,24 @@
   padding: 10px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header_section_formulaire input {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .header_section_formulaire input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .header_section_formulaire input {
+    width: 60px;
+  }
 }
 
 .header_section_formulaire input::-webkit-input-placeholder {
@@ -303,6 +345,12 @@ audio {
   font-size: 11pt;
 }
 
+@media screen and (max-width: 1200px) {
+  .createMain__form--input {
+    width: 100%;
+  }
+}
+
 .createMain__form .input_img {
   margin-bottom: 2rem;
 }
@@ -322,6 +370,15 @@ audio {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .createMain .flex_div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .createMain .listcreate {
@@ -362,6 +419,12 @@ audio {
 .createMain .listcreate .list_Content_user {
   text-align: end;
   color: #606060;
+}
+
+@media screen and (max-width: 1200px) {
+  .createMain .listcreate .list {
+    width: 100%;
+  }
 }
 
 .userMain {
@@ -758,6 +821,12 @@ audio {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .loginLeft {
+    display: none;
+  }
+}
+
 .loginRight {
   width: 50%;
   height: 100vh;
@@ -792,11 +861,23 @@ audio {
   font-size: 42pt;
 }
 
+@media screen and (max-width: 450px) {
+  .loginRight__title-title {
+    font-size: 28pt;
+  }
+}
+
 .loginRight__title-special {
   height: 10px;
   width: 65%;
   background-color: #0044ff;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 450px) {
+  .loginRight__title-special {
+    margin-bottom: 0.6rem;
+  }
 }
 
 .loginRight__form-input {
@@ -809,6 +890,12 @@ audio {
   width: 96%;
   color: #606060;
   font-size: 12pt;
+}
+
+@media screen and (max-width: 450px) {
+  .loginRight__form-input {
+    width: 90%;
+  }
 }
 
 .loginRight__form-input::-webkit-input-placeholder {
@@ -866,9 +953,22 @@ audio {
   background-color: #0044ff;
 }
 
+@media screen and (max-width: 767px) {
+  .loginRight {
+    width: 100%;
+  }
+}
+
 #containerLogin {
   margin-left: 4rem;
   margin-right: 4rem;
+}
+
+@media screen and (max-width: 450px) {
+  #containerLogin {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 #loginBack {
@@ -936,11 +1036,23 @@ audio {
   font-size: 42pt;
 }
 
+@media screen and (max-width: 450px) {
+  .registerLeft__title-title {
+    font-size: 28pt;
+  }
+}
+
 .registerLeft__title-special {
   height: 10px;
   width: 50%;
   background-color: #0044ff;
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 450px) {
+  .registerLeft__title-special {
+    margin-bottom: 0.6rem;
+  }
 }
 
 .registerLeft__form-input {
@@ -953,6 +1065,12 @@ audio {
   width: 96%;
   color: #606060;
   font-size: 12pt;
+}
+
+@media screen and (max-width: 450px) {
+  .registerLeft__form-input {
+    width: 90%;
+  }
 }
 
 .registerLeft__form-input::-webkit-input-placeholder {
@@ -999,6 +1117,12 @@ audio {
   color: #ffffff;
   border: solid 2px #0044ff;
   background-color: #0044ff;
+}
+
+@media screen and (max-width: 767px) {
+  .registerLeft {
+    width: 100%;
+  }
 }
 
 #containerRegister {
@@ -1132,6 +1256,13 @@ audio {
           transform: translateX(10px);
 }
 
+@media screen and (max-width: 1200px) {
+  .cardsContent {
+    width: 200px;
+    height: 120px;
+  }
+}
+
 .cardsContent_song {
   margin-top: 0.6rem;
   line-height: 28px;
@@ -1225,6 +1356,15 @@ audio {
   color: #606060;
 }
 
+@media screen and (max-width: 1200px) {
+  .playlist {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .audio_div {
   text-align: center;
   background-color: #F1F3F4;
@@ -1300,6 +1440,18 @@ audio {
 .playerMain__timer::-moz-range-thumb {
   width: 50px;
   height: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .playerMain__timer {
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .playerMain__timer {
+    width: 43rem;
+  }
 }
 
 .playerMain__volumeIcon {
