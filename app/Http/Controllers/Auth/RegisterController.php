@@ -65,7 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $filename = 'about.jpg';
+        $filename = 'default.jpg';
 
         $user = User::create([
             'name' => $data['name'],

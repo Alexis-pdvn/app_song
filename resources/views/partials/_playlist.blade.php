@@ -14,8 +14,8 @@
         <div>
         </div>
        
-        <div class="list_Content_time">
-            <p class="countLike">{{$s->votes}} <a href="" class="btn_like"><i class="far fa-heart"></i></a></p>
+        <div class="list_Content_user">
+            <a href="/utilisateur/{{ $s->user->id }}">{{ $s->user->name }}</a>
         </div>
 
     </li>

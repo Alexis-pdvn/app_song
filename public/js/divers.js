@@ -87,6 +87,22 @@ $(document).ready(function() {
         range.addEventListener('change',function() {
             song.currentTime = range.value;
         })
+        
+
     });
+       
+    
 }
 })
+
+
+/*
+function volume(amount){
+    var balAudio = document.getElementsByTagName('audio')[0];
+    balAudio.volume = amount;
+    if(balAudio.volume == 0){
+        document.getElementById('mute-icon').className = 'fas fa-volume-mute';
+    } else {
+      document.getElementById('mute-icon').className = 'fas fa-volume-up';
+    }
+*/

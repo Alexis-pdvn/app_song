@@ -14,7 +14,7 @@ class FirstController extends Controller{
         
         $user = User::inRandomOrder()->limit(4)->get();
         $songs = Song::all();
-        $allexcept = User::whereRaw("id <> ?", [Auth::id()])->get();
+        $allexcept = User::inRandomOrder()->whereRaw("id <> ?", [Auth::id()])->get();
         return view("firstcontroller.index", ["user" => $user, "songs" => $songs , "allexcept" => $allexcept]);
         
     }
@@ -35,9 +35,9 @@ class FirstController extends Controller{
     
     public function search($search) {
         // SELECT * FROM users WHERE name LIKE '$search%'
-       $user = User::WhereRaw("name LIKE CONCAT(?, '%')", [$search])->orderBy('id', 'desc')->get();
+       $user = User::WhereRaw("name LIKE CONCAT('%', ?, '%')", [$search])->orderBy('id', 'desc')->get();
 
-       $songs = Song::WhereRaw("title LIKE CONCAT('%', ?, '%')", [$search])->orderBy('votes', 'desc')->get();
+       $songs = Song::WhereRaw("title LIKE CONCAT('%', ?, '%')", [$search])->orderBy('created_at', 'desc')->get();
 
         return view("firstcontroller.search", ["search" => $search, "users" => $user, "songs" => $songs]);
     }
@@ -67,7 +67,7 @@ class FirstController extends Controller{
         $song->user_id = Auth::id();
         $song->save(); // INSERT INTO songs.....
 
-        return redirect("/");
+        return redirect("/songs/create");
 
     }
 
@@ -85,8 +85,10 @@ class FirstController extends Controller{
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();
+            
         }
 
         return back();
     }
+    
 }

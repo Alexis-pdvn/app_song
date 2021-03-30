@@ -55,7 +55,7 @@
                 </p>
 
                 @if(Auth::check() && Auth::id() == $user->id)
-                    <form id="overviewform" method="post" action="/utilisateur/updateoverview">
+                    <form id="overviewform" method="POST" action="/utilisateur/updateoverview">
                         @csrf
                         <input type="hidden" name="overview"/>
                         <button type="submit" class="btn-blue">Change</button>
@@ -95,7 +95,20 @@
 
     <div class="container">
         <div class="playlist-user">
+            <div>
+                @if(Auth::id() !=$user->id)
+                    <h1 class="title_playlist">Discover my songs :</h1>
+                    @else
+                    <h1 class="title_playlist">Your songs :</h1>
+                @endif
+
+                <ul class="list">
+    
+        
             @include("partials._songs", ["songs" => $user->songs])
+
+                </ul>
+                </div>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MMI'SOUND</title>
+    <title>SOUNDROP</title>
     <meta charset="UTF-8">
     <meta name="description" content="Pictures, laravel">
     <meta name="keywords" content="Pictures, laravel">
@@ -119,7 +119,7 @@
 </div>
 
 <div class="audio_div">
-    <audio controls id="audio">
+    <audio controls name="audio" id="audio">
 </div> 
 
 <div class="playerMain">
@@ -130,13 +130,7 @@
             <!-- <button id="next"><img src="/images/icons/next_button.png"></button> -->
         </div>
         <div>
-            <input id="timeRange" class="playerMain__timer" type="range" value="0" min="0"> 
-        </div>
-        <div>
-            <img class="playerMain__volumeIcon" src="/images/icons/volume_button.png" alt="icone volume button">
-        </div>
-        <div>
-            <input id="volumeRange" class="playerMain__volume" type="range" value="1" min="1" max="100">
+            <input id="timeRange" name="audio" class="playerMain__timer" type="range" value="0" min="0"> 
         </div>
     </div>
 </div>
@@ -154,6 +148,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+  
 </script>
 </body>
 </html>

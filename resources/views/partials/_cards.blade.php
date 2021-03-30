@@ -24,9 +24,7 @@
             @isset($c)
 
             <a href="#" data-file="{{$c->url}}" class="song">{{$c->title}}</a>
-            <p class="countLike">{{$c->votes}} <a href="" class="btn_like"><i class="far fa-heart"></i></a></p>
-
-            @endisset
+                @endisset
                 
             </div>
         </div>
