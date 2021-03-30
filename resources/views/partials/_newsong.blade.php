@@ -1,6 +1,3 @@
-<div>
-<h1 class="title_playlist">Discover other music</h1>
-<ul class="list">
 
 
 
@@ -23,6 +20,3 @@
     </li>
     
 @endforeach 
-
-</ul>
-</div>

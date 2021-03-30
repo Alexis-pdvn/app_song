@@ -25,9 +25,16 @@
             
 
                 
+            <div>
+                <h1 class="title_playlist">Discover other music</h1>
+                <ul class="list">
+
             @foreach($allexcept as $u)
                 @include("partials._newsong", ["songs" => $u->songs])
             @endforeach
+
+            </ul>
+            </div>  
             
 @endauth
         </div>
